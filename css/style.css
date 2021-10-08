@@ -10,6 +10,7 @@ body {
     height: 50px;
     align-items: center;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 .container {
     display: flex;
@@ -65,11 +66,19 @@ body {
     flex-direction: row;
 }
 
+.page-content h1 {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
+    margin-left: 45px;
+}
+
 
 .side-navbar {
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     width: 144px;
     background-color: #0E0F11;
 }
@@ -112,5 +121,100 @@ body {
     text-decoration: none;
     color: #FFF;
     font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
+}
+
+/* PAGE FILMS */
+.tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+}
+
+.tabs-content {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tab {
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
+}
+
+
+.tab-active {
+    background-color: rgb(255, 0, 0);
+}
+
+.content{
+    display: none;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-active {
+    display: flex;
+}
+
+.content-item {
+    padding: 0 25px;
+}
+
+.content-item-title {
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
+}
+
+.content-item .wrapper {
+    position: relative;
+    bottom: 35px;
+
+}
+
+.content-item a img {
+    border-radius: 15px;
+}
+
+.genre {
+    color: lightgrey;
+    font-size: 14px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 300;
+}
+
+.censorship {
+    position: relative;
+    bottom: 50px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.censorship span {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
