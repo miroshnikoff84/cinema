@@ -9,8 +9,11 @@ body {
     background-color: rgb(0, 0, 0);
     height: 50px;
     align-items: center;
+    padding-top: 5px;
 }
 .container {
+    display: flex;
+    flex-direction: row;
     width: 95%;
     margin: 0 auto;
 }
@@ -22,21 +25,26 @@ body {
 
 
 .header-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-
-.header-sity > a {
+.header-logo a img {
+    width: 170px;
+    height: 50px;
+}
+.header-sity  a {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     color: #1DB1BA;
     font-size: 16px;
     text-decoration: none;
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-weight: 700;
+    font-weight: 700;   
 }
+
 
 .header-user {
     background-color: #1C1F23;
@@ -49,7 +57,7 @@ body {
     font-size: 16px;
     text-decoration: none;
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .page {
@@ -64,13 +72,12 @@ body {
     height: auto;
     width: 144px;
     background-color: #0E0F11;
-    margin-left: 20px;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 10px;
 }
 
 .menu-item {
@@ -91,4 +98,19 @@ body {
 .menu-link:hover {
     transition: 0.5s;
     color: cornsilk;
+}
+.catalog-block > h2, 
+.stock-block > h2,
+.preview-block > h2 {
+    padding-left: 35px;
+    margin-bottom: 10px;
+}
+
+.catalog-block > h2 > a, 
+.stock-block > h2 > a,
+.preview-block > h2 > a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
 }
