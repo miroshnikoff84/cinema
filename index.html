@@ -1,196 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/slick-slider.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>CINEMA CLUB</title>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
-            <div class="header-wrapper">
-                <div class="header-logo">
-                    <a href="#">
-                        <img src="./img/logo.svg" alt="">
-                    </a>
-                </div>
-                <div class="header-sity">
-                    <a href="#">
-                        <img class="sity" src="img/sity.svg" alt="sity-icon">
-                    </a>
-                </div>
-                <div class="header-user">
-                    <a href="#">
-                        <img src="img/user.svg" alt="avatar" class="avatar">  
-                    </a>
+            <div class="row header-wrap">
+                <div class="col-6 header-left"><a href="#"><img src="./img/logo.svg" alt="" class="icon"></a></div>
+                <div class="col-6 header-right">
+                    <a href="#"><span class="city-label">Санкт-Петербург</span><img src="./img/city.svg" alt=""
+                            class="icon"></a>
+                    <a href="#"><img src="./img/user.svg" alt="" class="icon"></a>
                 </div>
             </div>
         </div>
-        
     </header>
-    <main class="main">
+    <div class="page">
         <div class="container">
-            <div class="side-navbar">
-            <ul class="menu">
-                <li class="menu-item">
-                    <a href="#" class="menu-link">Акции</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./pages/films.html" class="menu-link">Фильмы</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">Кинотеатры</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">Посетителям</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">О компании</a>
-                </li>
-            </ul>
-        </div>
-        <!-- side-navbar -->
-        <div class="page-content">
-            <div class="catalog-block">
-                <h2>
-                    <a href="#">Уже в кино</a>
-                </h2>
-                <div class="slider-wrapper">
-                    <div class="slider slider-catalog">
-                        <div class="slider__item filter">
-                            <img src="img/slide-1.jpg" alt="">
+            <div class="row page-wrap">
+                <div class="col-2 side-wrap">
+                    <ul class="side-nav">
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                        <li class="side-item"><a href="#">Фильмы</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-10 page-content">
+                    <div class="catalog-block">
+                        <h2>
+                            <a href="#">Уже в кино</a>
+                        </h2>
+                        <div class="slider slider-catalog">
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/slide-1.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/slide-2.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/slide-3.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/slide-4.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/slide-5.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/slide-6.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/slide-7.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="slider__item">
-                            <img src="img/slide-2.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/slide-3.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/slide-4.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/slide-5.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/slide-6.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/slide-7.jpg" alt="">
-                        </div>
+                        <!-- catalog-block -->
                     </div>
-                    <!-- slider-catalog -->
+                    <div class="stock-block">
+                        <h2>
+                            <a href="#">Акции</a>
+                        </h2>
+                        <div class="slider slider-stock">
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/stock-1.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/stock-2.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/stock-3.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/stock-4.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/stock-5.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/stock-6.jpg" alt="slide"></a>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/stock-7.jpg" alt="slide"></a>
+                            </div>
+                        </div>
+                        <!-- slider-catalog -->
+                    </div>
+                    <div class="preview-block">
+                        <h2>
+                            <a href="#">Скоро в кино</a>
+                        </h2>
+                        <div class="slider slider-preview">
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-1.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-2.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-3.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-4.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-5.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-6.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-7.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-8.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-9.jpg" alt="slide"></a>
+
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-10.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-11.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-12.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="img/preview-13.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-14.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="img/preview-15.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slider-catalog -->
+                    </div>
                 </div>
             </div>
-            <div class="stock-block">
-                <h2>
-                    <a href="#">Акции</a>
-                </h2>
-                <div class="slider-wrapper">
-                    <div class="slider slider-stock">
-                        <div class="slider__item filter">
-                            <img src="img/stock-1.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/stock-2.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/stock-3.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/stock-4.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/stock-5.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/stock-6.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/stock-7.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- slider-promo -->
-                </div>
-            </div>
-            <div class="preview-block">
-                <h2>
-                    <a href="#">Скоро в кино</a>
-                </h2>
-                <div class="slider-wrapper">
-                    <div class="slider slider-preview">
-                        <div class="slider__item filter">
-                            <img src="img/preview-1.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-2.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-3.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-4.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-5.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-6.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-7.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-8.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-9.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-10.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-11.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-12.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-13.jpg" alt="">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/preview-14.jpg" alt="">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/preview-15.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- slider-preview -->
-                </div>
-            </div>
         </div>
-        <!-- page-content -->
-        </div>
-    </main>
-    <div class="footer">
-        <div class="container">
-            <div class="footer-wrapper">
-                <div class="copyright">CINEMA</div>
-                <div class="app-market"></div>
-                <div class="social"></div>
-            </div>
-        </div>
-        
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/slider.js"></script>
-    <script src="js/slick.min.js"></script>
 </body>
+
 </html>
