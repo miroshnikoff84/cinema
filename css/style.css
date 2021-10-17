@@ -1,8 +1,11 @@
 body {
     background: #000;
 }
+h1, h2 {
+    color: #FFF;
+}
 
-.header-promo {
+.header-promo img{
     width: 100%;
     border-radius: 0 0 10px 10px;
 }
@@ -25,6 +28,9 @@ body {
 }
 .header-right a span:hover {
     color: #FFF;
+}
+.page-content {
+    padding-bottom: 70px;
 }
 
 .side-wrap {
@@ -90,6 +96,66 @@ a {
     width: 100%;
     list-style: none;
 }
+/*  page-films */
+.tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-left: 45px;
+}
+
+.tabs-content {
+    margin-top: 30px;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 700;
+}
+
+.tab-active {
+    background-color: tomato;
+}
+
+.content{
+    display: none;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-active {
+    display: flex;
+}
+
+.content-item {
+    position: relative;
+    padding: 0 5px;
+}
+
+
+.content-item .wrapper {
+    bottom: 35px;
+    padding-bottom: 10px;
+}
+
+.content-item a img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+
 @media (min-width: 992px) {
     .side-wrap {
         display: block;
