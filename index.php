@@ -1,4 +1,6 @@
-<?php include("path.php"); ?>
+<?php include "path.php";
+        include "app/database/db.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +17,12 @@
 
 <body>
 
-<?php include('app/include/header.php'); ?>
-<?php include('app/include/mobile-nav.php'); ?>
+<?php include 'app/include/header.php'; ?>
+<?php include 'app/include/mobile-nav.php'; ?>
     <div class="page">
         <div class="container">
             <div class="row page-wrap">
-                <?php include('app/include/sidebar.php'); ?>
+                <?php include 'app/include/sidebar.php'; ?>
                 <div class="col-12 col-lg-10 page-content">
                     <div class="catalog-block">
                             <a href="films.php"><h2>Уже в кино</h2></a>

@@ -19,14 +19,17 @@ h1, h2 {
 .header-right a {
     padding-left: 5px;
 }
-.header-right a span {
+.city-label{
     color: rgb(190, 190, 190);
+}
+.city-label,
+.complete {
     font-size: 8px;
     margin-right: 6px;
     text-decoration: none;
     text-transform: uppercase;
 }
-.header-right a span:hover {
+.city-label:hover {
     color: #FFF;
 }
 .page-content {
@@ -157,6 +160,20 @@ a {
 .content-item a img {
     border-radius: 5px;
     width: 100%;
+}
+
+.reg_form h2{
+    text-align: center;
+    margin: 30px 0;
+}
+.error{
+    color: #ff0000;
+}
+.complete{
+    color: rgb(0, 255, 20);
+}
+.form-label{
+    color: #0c63e4;
 }
 
 

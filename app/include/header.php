@@ -6,7 +6,17 @@
             <div class="col-6 header-right">
                 <a href="#"><span class="city-label">Санкт-Петербург</span><img src="assets/img/city.svg" alt=""
                                                                                 class="icon"></a>
-                <a href="#"><img src="assets/img/user.svg" alt="" class="icon"></a>
+                <?php if (isset($_SESSION['id'])): ?>
+                <a href="reg.php">
+                    <img src="assets/img/user.svg" alt="" class="icon">
+                    <span class="complete"><?php echo $_SESSION['login']; ?></span>
+                </a>
+                <?php else: ?>
+                    <a href="#">
+                        <img src="assets/img/user.svg" alt="" class="icon">
+                        <span class="city-label">Вход</span>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

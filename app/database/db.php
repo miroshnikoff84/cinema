@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require 'connect.php';
 
 function tt($value){
@@ -74,14 +75,6 @@ function selectOne($table, $params = []){
     return $query->fetch();
 }
 
-//    $params = [
-//        'admin' => 0,
-//        'first_name' => 'Some'
-//    ];
-
-//tt(selectAll('users', $params));
-//tt(selectOne('users'));
-
 //Запись в таблицу БД
 function insert($table, $params){
     global $pdo;
@@ -105,14 +98,39 @@ function insert($table, $params){
     $query = $pdo->prepare($sql);
     $query->execute($params);
     dbCheckError($query);
+    return $pdo->lastInsertId();
 }
 
-$arrData = [
-    'admin' => '0',
-    'first_name' => 'Alex',
-    'email' => 'fg@fggf.tr',
-    'password' => '34234',
-    'created' => '2021-01-01 00:00:01'
-];
+// Обновление строки в таблице
+function update($table, $id, $params){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($params as $key => $value){
+        if($i === 0){
+            $str = $str . $key . " = '" . $value . "'";
+        }else{
+            $str = $str . ", " . $key . " = '" . $value . "'";
 
-insert("users", $arrData);
+        }
+        $i++;
+    }
+
+    $sql = "UPDATE $table SET $str WHERE id = $id";
+    $query = $pdo->prepare($sql);
+    $query->execute($params);
+    dbCheckError($query);
+}
+
+// Удаление
+function delete($table, $id){
+    global $pdo;
+
+
+    $sql = "DELETE FROM $table WHERE id = $id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    dbCheckError($query);
+}
+
+
