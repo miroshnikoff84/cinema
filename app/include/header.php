@@ -7,14 +7,17 @@
                 <a href="#"><span class="city-label">Санкт-Петербург</span><img src="assets/img/city.svg" alt=""
                                                                                 class="icon"></a>
                 <?php if (isset($_SESSION['id'])): ?>
-                <a href="reg.php">
-                    <img src="assets/img/user.svg" alt="" class="icon">
+                <a href="#">
                     <span class="complete"><?php echo $_SESSION['login']; ?></span>
+                    <a href="<?php echo BASE_URL ?>"><img src="assets/img/exit.svg" alt="" class="icon"></a>
                 </a>
+                <?php
+                    if ($_SESSION['admin']): ?>
+                        <a href="#"><img src="assets/img/adm.svg" alt="" class="icon"></a></a>
+                    <?php endif; ?>
                 <?php else: ?>
-                    <a href="#">
+                    <a href="log.php">
                         <img src="assets/img/user.svg" alt="" class="icon">
-                        <span class="city-label">Вход</span>
                     </a>
                 <?php endif; ?>
             </div>

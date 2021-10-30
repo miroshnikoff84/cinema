@@ -1,6 +1,6 @@
 <?php
-include("path.php");
-include("app/controllers/users.php");
+    include "path.php";
+    include("app/controllers/users.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,35 +21,25 @@ include("app/controllers/users.php");
 <?php include('app/include/header.php'); ?>
 <?php include('app/include/mobile-nav.php'); ?>
 <div class="container reg_form">
-    <form class="row justify-content-md-center" method="post" action="reg.php">
-        <h2>Регистрация</h2>
+    <form class="row justify-content-md-center" method="post" action="log.php">
+        <h2>Авторизация</h2>
         <div class="mb-3 col-12 col-md-4 error">
             <?=$errMsg?>
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
-            <label for="formGroupExampleInput" class="form-label">Логин</label>
-            <input name="login" value="<?=$login?>" type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите ваш логин...">
-        </div>
-        <div class="w-100"></div>
-        <div class="mb-3 col-12 col-md-4">
             <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш email...">
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <label for="exampleInputPassword1" class="form-label">Пароль</label>
-            <input name="pass-first" type="password" class="form-control" id="exampleInputPassword1">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш пароль...">
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
-            <label for="exampleInputPassword2" class="form-label">Повторите пароль</label>
-            <input name="pass-second" type="password" class="form-control" id="exampleInputPassword2">
-        </div>
-        <div class="w-100"></div>
-        <div class="mb-3 col-12 col-md-4">
-            <button type="submit" name="button-reg" class="btn btn-primary">Регистрация</button>
-            <a href="log.php">Войти</a>
+            <button type="submit" name="button-log" class="btn btn-primary">Войти</button>
+            <a href="<?php echo BASE_URL . "reg.php"?>">Регистрация</a>
         </div>
         <!--  FORM  -->
     </form>
@@ -62,4 +52,5 @@ include("app/controllers/users.php");
 </body>
 
 </html>
+
 

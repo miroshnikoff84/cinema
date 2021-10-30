@@ -4,7 +4,19 @@ include("app/database/db.php");
 $errMsg = '';
 $regComplete = '';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
+function userSession($userArr){
+    $_SESSION['id'] = $userArr['id'];
+    $_SESSION['login'] = $userArr['username'];
+    $_SESSION['admin'] = $userArr['admin'];
+
+    if($_SESSION['admin']){
+        header('location: ' . BASE_URL . "admin/admin.php");
+    }else{
+        header('location: ' . BASE_URL);
+    }
+}
+
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
     $admin = 0;
     $login = trim($_POST['login']);
     $email = trim($_POST['email']);
@@ -32,11 +44,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $id = insert('users', $post);
             $user = selectOne('users', ['id' => $id]);
 
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['login'] = $user['username'];
-            $_SESSION['admin'] = $user['admin'];
-            header('location: ' . BASE_URL);
-
+            userSession($user);
 //            tt($_SESSION);
 //            exit();
 //            $regComplete = "Пользователь " . $email . " успешно зарегистрирован";
@@ -46,3 +54,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $login = '';
     $email = '';
     }
+// Code for authorized
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
+
+    $email = trim($_POST['email']);
+    $pass = trim($_POST['password']);
+
+    if ($email === '' || $pass === ''){
+        $errMsg = 'Не все поля заполнены!';
+    }else{
+        $existence = selectOne('users', ['email' => $email]);
+        if($existence && password_verify($pass, $existence['password'])){
+            userSession($existence);
+        }else{
+            $errMsg = 'Почта или пароль введены не верно!';
+        }
+
+    }
+
+}else{
+    $email = '';
+}
