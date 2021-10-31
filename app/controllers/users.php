@@ -4,13 +4,13 @@ include("app/database/db.php");
 $errMsg = '';
 $regComplete = '';
 
-function userSession($userArr){
-    $_SESSION['id'] = $userArr['id'];
-    $_SESSION['login'] = $userArr['username'];
-    $_SESSION['admin'] = $userArr['admin'];
+function userAuth($user){
+    $_SESSION['id'] = $user['id'];
+    $_SESSION['login'] = $user['username'];
+    $_SESSION['admin'] = $user['admin'];
 
     if($_SESSION['admin']){
-        header('location: ' . BASE_URL . "admin/admin.php");
+        header('location: ' . BASE_URL . "admin/post-film/index.php");
     }else{
         header('location: ' . BASE_URL);
     }
@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
             $id = insert('users', $post);
             $user = selectOne('users', ['id' => $id]);
 
-            userSession($user);
+            userAuth($user);
 //            tt($_SESSION);
 //            exit();
 //            $regComplete = "Пользователь " . $email . " успешно зарегистрирован";
@@ -65,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
     }else{
         $existence = selectOne('users', ['email' => $email]);
         if($existence && password_verify($pass, $existence['password'])){
-            userSession($existence);
+            userAuth($existence);
         }else{
             $errMsg = 'Почта или пароль введены не верно!';
         }

@@ -175,6 +175,10 @@ a {
 .form-label{
     color: #0c63e4;
 }
+.admin-btn-wrap {
+    margin-top: 20px;
+    width: 300px;
+}
 
 
 
