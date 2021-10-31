@@ -28,8 +28,8 @@
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш email...">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" value="<?=$email?>" type="email" class="form-control" id="email" placeholder="Введите ваш email...">
         </div>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">

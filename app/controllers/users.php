@@ -10,9 +10,9 @@ function userAuth($user){
     $_SESSION['admin'] = $user['admin'];
 
     if($_SESSION['admin']){
-        header('location: ' . BASE_URL . "admin/post-film/index.php");
+        header('location: ' . BASE_URL . "admin/add-film/index.php");
     }else{
-        header('location: ' . BASE_URL);
+        header('location: ' . BASE_URL . "account/set-account.php");
     }
 }
 
@@ -45,9 +45,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
             $user = selectOne('users', ['id' => $id]);
 
             userAuth($user);
-//            tt($_SESSION);
-//            exit();
-//            $regComplete = "Пользователь " . $email . " успешно зарегистрирован";
         }
     }
     }else{

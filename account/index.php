@@ -1,5 +1,5 @@
-<?php include "../../path.php";
-include "../../app/database/db.php";
+<?php include "../path.php";
+include "../app/database/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,28 +9,27 @@ include "../../app/database/db.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/slick-slider.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/admin.css">
-    <link rel="stylesheet" href="../../assets/css/bootstrap-timepicker.css">
-    <title>ADMIN-USERS</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/slick-slider.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-timepicker.css">
+    <title>Личный кабинет</title>
 </head>
 
 <body>
 
-<?php include '../../app/include/header.php'; ?>
+<?php include '../app/include/header.php'; ?>
 <div class="page">
     <div class="container">
         <div class="row page-wrap">
-            <?php include '../../app/include/admin-sidebar.php'; ?>
+            <?php include '../app/include/user-account-sidebar.php'; ?>
             <div class="col-12 col-lg-10">
                 <div class="row">
-                    <h2 class="col">ADMIN-USERS</h2>
-                    <div class="col"><?php include '../../app/include/admin-btn.php'; ?></div>
+                    <h2 class="col">Личный кабинет</h2>
                 </div>
                 <div class="add-post-film col-12">
-                    <form action="create.php" method="post">
+                    <form>
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="login">Логин</label>
@@ -84,7 +83,7 @@ include "../../app/database/db.php";
                             <option value="2">User</option>
                         </select>
                         <div class="col mb-3">
-                            <button class="btn btn-primary" type="submit">Сохранить</button>
+                            <a href="set-account.php" class="btn btn-primary">Изменить</a>
                         </div>
                 </div>
                 </form>
@@ -94,11 +93,11 @@ include "../../app/database/db.php";
 </div>
 </div>
 
-<script src="../../assets/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/jquery-3.6.0.min.js"></script>
-<script src="../../assets/js/slick.min.js"></script>
-<script src="../../assets/js/slider.js"></script>
-<script src="../../assets/js/bootstrap-timepicker.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
+<script src="../assets/js/slider.js"></script>
+<script src="../assets/js/bootstrap-timepicker.js"></script>
 </body>
 
 </html>
