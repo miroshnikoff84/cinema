@@ -1,5 +1,5 @@
-<?php include "../../path.php";
-include "../../app/database/db.php";
+<?php
+include "../../app/controllers/admin-film.php";
 ?>
 
 <!DOCTYPE html>
@@ -42,19 +42,21 @@ include "../../app/database/db.php";
                         <div class="col-1">Edit</div>
                         <div class="col-1">Delete</div>
                     </div>
+                    <?php foreach ($addFilms as $key => $addFilm): ?>
                     <div class="row table">
-                        <div class="col-1 id">1</div>
-                        <div class="col-1 title">Веном</div>
-                        <div class="col-1 genre">боевик</div>
-                        <div class="col-1 description">11111</div>
-                        <div class="col-1 image">image.jpg</div>
-                        <div class="col-1 censor">12+</div>
-                        <div class="col-1 show-date">12.08.21</div>
-                        <div class="col-1 duration">1:25:00</div>
-                        <div class="col-1 country">США</div>
-                        <div class="col-1"><a class="green" href="#">Edit</a></div>
-                        <div class="col-1"><a class="red" href="#">Delete</a></div>
+                        <div class="col-1 id"><?=$key + 1; ?></div>
+                        <div class="col-1 title"><?=$addFilm['title']; ?></div>
+                        <div class="col-1 genre"><?=$addFilm['genre']; ?></div>
+                        <div class="col-1 description"><?=$addFilm['description']; ?></div>
+                        <div class="col-1 image"><?=$addFilm['image']; ?></div>
+                        <div class="col-1 censor"><?=$addFilm['age']; ?></div>
+                        <div class="col-1 show-date"><?=$addFilm['date']; ?></div>
+                        <div class="col-1 duration"><?=$addFilm['time']; ?></div>
+                        <div class="col-1 country"><?=$addFilm['country']; ?></div>
+                        <div class="col-1"><a class="green" href="edit.php?id=<?=$addFilm['id']; ?>">Edit</a></div>
+                        <div class="col-1"><a class="red" href="edit.php?del_id=<?=$addFilm['id']; ?>">Delete</a></div>
                     </div>
+                    <?php endforeach; ?>
 
                 </div>
             </div>

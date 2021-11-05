@@ -1,5 +1,5 @@
-<?php include "../../path.php";
-include "../../app/database/db.php";
+<?php
+include "../../app/controllers/admin-users.php";
 ?>
 
 <!DOCTYPE html>
@@ -26,65 +26,60 @@ include "../../app/database/db.php";
             <?php include '../../app/include/admin-sidebar.php'; ?>
             <div class="col-12 col-lg-10">
                 <div class="row">
-                    <h2 class="col">ADMIN-USERS</h2>
-                    <div class="col"><?php include '../../app/include/admin-btn.php'; ?></div>
+                    <h2 class="col">EDIT-USERS</h2>
                 </div>
                 <div class="add-post-film col-12">
-                    <form action="create.php" method="post">
+                    <form action="edit.php" method="post">
+                        <input value="<?=$id?>" name="id" type="hidden" >
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="login">Логин</label>
-                                <input type="text" class="form-control" aria-label="Логин" id="login">
+                                <input value="<?=$username?>" name="username" type="text" class="form-control" aria-label="Логин" id="login">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="email">Email</label>
-                                <input type="email" class="form-control"  autocomplete="off" id="email">
+                                <input value="<?=$email?>" name="email" type="email" class="form-control"  autocomplete="off" id="email">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="password">Пароль</label>
-                                <input type="password" class="form-control"  autocomplete="off" id="password">
+                                <input value="<?=$pass?>" name="password" type="password" class="form-control"  autocomplete="off" id="password">
                             </div>
                         </div>
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="name">Имя</label>
-                                <input type="text" class="form-control" autocomplete="off" id="name">
+                                <input value="<?=$firstName?>" name="firstName" type="text" class="form-control" id="name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="second-name">Отчество</label>
-                                <input type="text" class="form-control"  autocomplete="off" id="second-name">
+                                <input value="<?=$secondName?>" name="secondName" type="text" class="form-control" id="second-name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="last-name">Фамилия</label>
-                                <input type="text" class="form-control"  autocomplete="off" id="last-name">
+                                <input value="<?=$lastName?>" name="lastName" type="text" class="form-control" id="last-name">
                             </div>
                         </div>
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Дата рождения</label>
-                                <input type="date" class="form-control" id="input-date">
+                                <input value="<?=$birthday?>" name="birthday" type="date" class="form-control" id="input-date">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-tel">Телефон</label>
-                                <input type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
+                                <input value="<?=$phone?>" name="phone" type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Аккаунт создан</label>
-                                <input type="date" class="form-control" id="input-date">
+                                <input value="<?=$create?>" name="create" type="date" class="form-control" id="input-date">
                             </div>
                         </div>
-                        <select class="w-10 form-select mb-3" aria-label="Orders">
-                            <option selected>Заказы</option>
-                            <option value="1"><p>№</p></option>
-                            <option value="2"><p>№</p></option>
-                        </select>
-                        <select class="w-10 form-select mb-3" aria-label="Default select example">
-                            <option selected>Статус</option>
+                        <select name="admin" class="w-25 form-select mb-3">
+                            <option value="0">User</option>
                             <option value="1">Admin</option>
-                            <option value="2">User</option>
                         </select>
+
                         <div class="col mb-3">
-                            <button class="btn btn-primary" type="submit">Сохранить</button>
+                            <button name="edit-user" class="btn btn-primary" type="submit">Сохранить</button>
                         </div>
                 </div>
                 </form>

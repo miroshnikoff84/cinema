@@ -1,5 +1,5 @@
-<?php include "../path.php";
-include "../app/database/db.php";
+<?php
+    include "../app/controllers/users.php";
 ?>
 
 <!DOCTYPE html>
@@ -28,65 +28,42 @@ include "../app/database/db.php";
                 <div class="row">
                     <h2 class="col">Личный кабинет</h2>
                 </div>
-                <div class="add-post-film col-12">
-                    <form>
+                <div class="col-12">
+                    <form action="index.php" method="get">
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="login">Логин</label>
-                                <input type="text" class="form-control" aria-label="Логин" id="login">
+                                <input name="login" disabled="disabled" value="<?=$lkUser['username']?>" type="text" class="form-control" autocomplete="off" id="login">
                             </div>
-                            <div class="col input-group">
-                                <label class="input-group-text" for="email">Email</label>
-                                <input type="email" class="form-control"  autocomplete="off" id="email">
-                            </div>
-                            <div class="col input-group">
-                                <label class="input-group-text" for="password">Пароль</label>
-                                <input type="password" class="form-control"  autocomplete="off" id="password">
-                            </div>
-                        </div>
-                        <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="name">Имя</label>
-                                <input type="text" class="form-control" autocomplete="off" id="name">
-                            </div>
-                            <div class="col input-group">
-                                <label class="input-group-text" for="second-name">Отчество</label>
-                                <input type="text" class="form-control"  autocomplete="off" id="second-name">
+                                <input name="first-name" disabled="disabled" value="<?=$lkUser['first-name']?>" type="text" class="form-control" autocomplete="off" id="name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="last-name">Фамилия</label>
-                                <input type="text" class="form-control"  autocomplete="off" id="last-name">
+                                <input value="<?=$lkUser['last-name']?>" type="text" class="form-control" id="last-name">
+                            </div>
+
+                        </div>
+
+                        <div class="row  input-group mb-3 g-3">
+                            <div class="col input-group">
+                                <label class="input-group-text" for="email">Email</label>
+                                <input value="<?=$lkUser['email']?>" type="text" class="form-control" id="email">
+                            </div>
+                            <div class="col input-group">
+                                <label class="input-group-text" for="input-tel">Телефон</label>
+                                <input value="<?=$lkUser['phone']?>" type="text" class="form-control" id="input-tel">
                             </div>
                         </div>
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Дата рождения</label>
-                                <input type="date" class="form-control" id="input-date">
-                            </div>
-                            <div class="col input-group">
-                                <label class="input-group-text" for="input-tel">Телефон</label>
-                                <input type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
-                            </div>
-                            <div class="col input-group">
-                                <label class="input-group-text" for="input-date">Аккаунт создан</label>
-                                <input type="date" class="form-control" id="input-date">
+                                <input value="<?=$lkUser['birthday']?>" type="text" class="form-control" id="input-date">
                             </div>
                         </div>
-                        <select class="w-10 form-select mb-3" aria-label="Orders">
-                            <option selected>Заказы</option>
-                            <option value="1"><p>№</p></option>
-                            <option value="2"><p>№</p></option>
-                        </select>
-                        <select class="w-10 form-select mb-3" aria-label="Default select example">
-                            <option selected>Статус</option>
-                            <option value="1">Admin</option>
-                            <option value="2">User</option>
-                        </select>
-                        <div class="col mb-3">
-                            <a href="set-account.php" class="btn btn-primary">Изменить</a>
-                        </div>
+                    </form>
                 </div>
-                </form>
             </div>
         </div>
     </div>

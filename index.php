@@ -1,5 +1,5 @@
-<?php include "path.php";
-        include "app/database/db.php";
+<?php
+    include "app/controllers/main.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
 <?php include 'app/include/header.php'; ?>
 <?php include 'app/include/mobile-nav.php'; ?>
     <div class="page">
@@ -25,64 +24,18 @@
                 <?php include 'app/include/sidebar.php'; ?>
                 <div class="col-12 col-lg-10 page-content">
                     <div class="catalog-block">
-                            <a href="films.php"><h2>Уже в кино</h2></a>
+                            <a href="#"><h2>Уже в кино</h2></a>
                         <div class="slider slider-catalog">
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/slide-1.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Не время убивать</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
+                            <?php foreach ($sliderCatalog as $key => $addSlide): ?>
                             <div class="slider__item">
-                                <a href="#"><img src="assets/img/slide-2.jpg" alt="slide"></a>
-                                <div class="censorship"><span>6+</span></div>
+                                <a href="#"><img src="assets/img/slide-<?=$key + 1; ?>.jpg" alt="slide"></a>
+                                <div class="censorship"><span><?=$addSlide['age']; ?></span></div>
                                 <div class="wrapper">
-                                    <div class="content-item-title">Босс молокосос 2</div>
-                                    <div class="genre">мультфильм</div>
+                                    <div class="content-item-title"><?=$addSlide['title']; ?></div>
+                                    <div class="genre"><?=$addSlide['genre']; ?></div>
                                 </div>
                             </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/slide-3.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Шан-чи: Легенда десяти колец</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/slide-4.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Дюна</div>
-                                    <div class="genre">фантастика</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/slide-5.jpg" alt="slide"></a>
-                                <div class="censorship"><span>16+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном 2</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/slide-6.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Семейка Адамс: Горящий тур</div>
-                                    <div class="genre">мультфильм</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/slide-7.jpg" alt="slide"></a>
-                                <div class="censorship"><span>0+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Мой маленький пони</div>
-                                    <div class="genre">мультфильм</div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                         <!-- catalog-block -->
                     </div>

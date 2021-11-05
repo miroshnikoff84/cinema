@@ -26,14 +26,16 @@ include "../../app/controllers/admin-film.php";
             <?php include '../../app/include/admin-sidebar.php'; ?>
             <div class="col-12 col-lg-10">
                 <div class="row ">
-                    <h2 class="col">ADMIN-FILM</h2>
+                    <h2 class="col">EDIT-FILM</h2>
                     <div class="col"><?php include '../../app/include/admin-btn.php'; ?></div>
                 </div>
                 <div class="add-post-film col-12">
                     <div class="mb-3 col-12 col-md-4 error">
                         <?=$errMsg?>
                     </div>
-                    <form action="create.php" method="post">
+                    <form action="edit.php" method="post">
+                        <input value="<?=$id?>" name="id" type="hidden" >
+
                         <div class="col mb-3">
                             <input value="<?=$title?>" name="title" type="text" class="form-control" placeholder="Название" aria-label="Название фильма">
                         </div>
@@ -48,7 +50,7 @@ include "../../app/controllers/admin-film.php";
                             <input  value="<?=$addFile?>" name="add-file" type="file" class="form-control" id="inputGroupFile02">
                             <label class="input-group-text" for="inputGroupFile02">Upload</label>
                         </div>
-                        <select  value="<?=$age?>" name="age" class="form-select mb-3" aria-label="Default select example">
+                        <select  name="age" class="form-select mb-3" aria-label="Default select example">
                             <option selected>Возрастное ограничение</option>
                             <option value="0+">0+</option>
                             <option value="3+">3+</option>
@@ -57,24 +59,24 @@ include "../../app/controllers/admin-film.php";
                             <option value="16+">16+</option>
                             <option value="18+">18+</option>
                         </select>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="input-date">Дата выхода</label>
-                                <input  value="<?=$date?>" name="date" type="date" class="form-control" id="input-date">
-                                <label class="input-group-text" for="input-time">Время</label>
-                                <input  value="<?=$time?>" name="time" type="time" class="form-control" id="input-time">
-                            </div>
-                            <div class="col mb-3">
-                                <input  value="<?=$country?>" name="country" type="text" class="form-control" placeholder="Страна" aria-label="Страна">
-                            </div>
-                            <div class="col mb-3">
-                                <button name="add-film" class="btn btn-primary" type="submit">Добавить</button>
-                            </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="input-date">Дата выхода</label>
+                            <input  value="<?=$date?>" name="date" type="date" class="form-control" id="input-date">
+                            <label class="input-group-text" for="input-time">Время</label>
+                            <input  value="<?=$time?>" name="time" type="time" class="form-control" id="input-time">
                         </div>
-                    </form>
+                        <div class="col mb-3">
+                            <input  value="<?=$country?>" name="country" type="text" class="form-control" placeholder="Страна" aria-label="Страна">
+                        </div>
+                        <div class="col mb-3">
+                            <button name="edit-film" class="btn btn-primary" type="submit">Сохранить</button>
+                        </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script src="../../assets/js/bootstrap.bundle.min.js"></script>

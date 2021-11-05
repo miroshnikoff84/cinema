@@ -1,5 +1,5 @@
 <?php
-include("app/database/db.php");
+include "app/database/db.php";
 
 $errMsg = '';
 $regComplete = '';
@@ -10,12 +10,12 @@ function userAuth($user){
     $_SESSION['admin'] = $user['admin'];
 
     if($_SESSION['admin']){
-        header('location: ' . BASE_URL . "admin/add-film/index.php");
+        header('location: ' . "http://localhost/cinema/admin/add-film/index.php");
     }else{
-        header('location: ' . BASE_URL . "account/set-account.php");
+        header('location: ' . "http://localhost/cinema/account/index.php");
     }
 }
-
+// Registration
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
     $admin = 0;
     $login = trim($_POST['login']);
@@ -56,6 +56,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
 
     $email = trim($_POST['email']);
     $pass = trim($_POST['password']);
+
 
     if ($email === '' || $pass === ''){
         $errMsg = 'Не все поля заполнены!';

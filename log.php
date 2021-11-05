@@ -1,6 +1,5 @@
 <?php
-    include "path.php";
-    include("app/controllers/users.php");
+    include "app/controllers/users.php";
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +38,7 @@
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <button type="submit" name="button-log" class="btn btn-primary">Войти</button>
-            <a href="<?php echo BASE_URL . "reg.php"?>">Регистрация</a>
+            <a href="http://localhost/cinema/reg.php">Регистрация</a>
         </div>
         <!--  FORM  -->
     </form>
