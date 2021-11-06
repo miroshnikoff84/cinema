@@ -1,5 +1,5 @@
 <?php
-    include "../app/controllers/users.php";
+    include "../app/controllers/set-account.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,15 +33,15 @@
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="login">Логин</label>
-                                <input name="login" disabled="disabled" value="<?=$lkUser['username']?>" type="text" class="form-control" autocomplete="off" id="login">
+                                <input name="login" disabled="disabled" value="" type="text" class="form-control" autocomplete="off" id="login">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="name">Имя</label>
-                                <input name="first-name" disabled="disabled" value="<?=$lkUser['first-name']?>" type="text" class="form-control" autocomplete="off" id="name">
+                                <input name="first-name" disabled="disabled" value="" type="text" class="form-control" autocomplete="off" id="name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="last-name">Фамилия</label>
-                                <input value="<?=$lkUser['last-name']?>" type="text" class="form-control" id="last-name">
+                                <input value="" type="text" class="form-control" id="last-name">
                             </div>
 
                         </div>
@@ -49,17 +49,17 @@
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="email">Email</label>
-                                <input value="<?=$lkUser['email']?>" type="text" class="form-control" id="email">
+                                <input value="" type="text" class="form-control" id="email">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-tel">Телефон</label>
-                                <input value="<?=$lkUser['phone']?>" type="text" class="form-control" id="input-tel">
+                                <input value="" type="text" class="form-control" id="input-tel">
                             </div>
                         </div>
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Дата рождения</label>
-                                <input value="<?=$lkUser['birthday']?>" type="text" class="form-control" id="input-date">
+                                <input value="" type="text" class="form-control" id="input-date">
                             </div>
                         </div>
                     </form>

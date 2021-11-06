@@ -1,4 +1,3 @@
-
 <div class="col-2 side-wrap">
     <ul class="side-nav">
         <li class="side-item"><a href="<?php echo "http://localhost/cinema/admin/add-film/index.php"?>">Фильмы</a></li>

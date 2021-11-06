@@ -49,6 +49,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-user'])){
     }elseif (mb_strlen($username, 'UTF8') < 2){
         $errMsg = "В имене должно быть более 2-х символов!";
     }else{
+        $pass = password_hash($pass, PASSWORD_DEFAULT);
         $users = [
             'admin' => $admin,
             'username' => $username,

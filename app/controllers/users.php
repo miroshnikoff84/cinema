@@ -12,7 +12,7 @@ function userAuth($user){
     if($_SESSION['admin']){
         header('location: ' . "http://localhost/cinema/admin/add-film/index.php");
     }else{
-        header('location: ' . "http://localhost/cinema/account/index.php");
+        header('location: ' . "http://localhost/cinema/index.php");
     }
 }
 // Registration
