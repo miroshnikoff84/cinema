@@ -13,7 +13,7 @@
                         <a href="http://localhost/cinema/admin/add-film/index.php"><img src="http://localhost/cinema/assets/img/adm.svg" alt="adm" class="icon"></a></a>
                     <?php else: ?>
                         <a href="http://localhost/cinema/account/index.php">
-                        <img src="http://localhost/cinema/assets/img/user-green.svg>" alt="user" class="icon">
+                        <img src="http://localhost/cinema/assets/img/user-green.svg" alt="user" class="icon">
                         <span class="complete"><?php echo $_SESSION['login']; ?></span>
                         </a>
                     <?php endif; ?>
