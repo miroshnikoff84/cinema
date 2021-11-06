@@ -1,5 +1,5 @@
 <?php
-    include "../app/controllers/set-account.php";
+include "../app/controllers/set-account.php";
 ?>
 
 <!DOCTYPE html>
@@ -29,40 +29,37 @@
                     <h2 class="col">Личный кабинет</h2>
                 </div>
                 <div class="col-12">
-                    <form action="index.php" method="get">
+                    <form action="index.php" method="post">
+                        <input value="<?=$id?>" name="id" type="hidden" >
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
-                                <label class="input-group-text" for="login">Логин</label>
-                                <input name="login" disabled="disabled" value="<?=$username?>" type="text" class="form-control" autocomplete="off" id="login">
-                            </div>
-                            <div class="col input-group">
                                 <label class="input-group-text" for="name">Имя</label>
-                                <input name="first-name" disabled="disabled" value="<?=$firstName?>" type="text" class="form-control" autocomplete="off" id="name">
+                                <input name="firstName" value="<?=$firstName?>" type="text" class="form-control" autocomplete="off" id="name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="last-name">Фамилия</label>
-                                <input name="last-name" disabled="disabled" value="<?=$lastName?>" type="text" class="form-control" id="last-name">
+                                <input name="lastName" value="<?=$lastName?>" type="text" class="form-control" id="last-name">
+                            </div>
+                            <div class="col input-group">
+                                <label class="input-group-text" for="second-name">Отчество</label>
+                                <input name="secondName" value="<?=$secondName?>" type="text" class="form-control" id="second-name">
                             </div>
 
                         </div>
 
                         <div class="row  input-group mb-3 g-3">
-                            <div class="col input-group">
-                                <label class="input-group-text" for="email">Email</label>
-                                <input value="<?=$email?>" disabled="disabled" type="text" class="form-control" id="email">
-                            </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-tel">Телефон</label>
-                                <input value="<?=$phone?>" disabled="disabled" type="text" class="form-control" id="input-tel">
+                                <input value="<?=$phone?>" name="phone" type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
+                            </div>
+                            <div class="col input-group">
+                                <label class="input-group-text" for="input-date">Дата рождения</label>
+                                <input value="<?=$birthday?>" name="birthday" type="date" class="form-control" id="input-date">
                             </div>
                         </div>
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
-                                <label class="input-group-text" for="input-date">Дата рождения</label>
-                                <input value="<?=$birthday?>" disabled="disabled" type="text" class="form-control" id="input-date">
-                            </div>
-                            <div class="col">
-                                <a href="edit.php?id=<?=$users['id']; ?>" class="btn btn-info">Изменить</a>
+                                <button name="edit-account" class="btn btn-info" type="submit">Сохранить</button>
                             </div>
                         </div>
                     </form>

@@ -12,7 +12,7 @@
                     <?php if ($_SESSION['admin']): ?>
                         <a href="http://localhost/cinema/admin/add-film/index.php"><img src="http://localhost/cinema/assets/img/adm.svg" alt="adm" class="icon"></a></a>
                     <?php else: ?>
-                        <a href="http://localhost/cinema/account/index.php">
+                        <a href="http://localhost/cinema/account/index.php?id=<?=$_SESSION['id']; ?>">
                         <img src="http://localhost/cinema/assets/img/user-green.svg" alt="user" class="icon">
                         <span class="complete"><?php echo $_SESSION['login']; ?></span>
                         </a>
