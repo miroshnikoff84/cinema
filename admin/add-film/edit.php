@@ -46,9 +46,15 @@ include "../../app/controllers/admin-film.php";
                             <label class="form-label" for="content"></label>
                             <textarea name="description" class="form-control" id="content" rows="3" placeholder="Описание"><?=$description?></textarea>
                         </div>
-                        <div class="input-group mb-3">
-                            <input  value="<?=$addFile?>" name="add-file" type="file" class="form-control" id="inputGroupFile02">
-                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <div class="row input-group mb-3 g-3">
+                            <div class="col input-group">
+                                <input  value="<?=$addImage?>" name="addImage" type="file" class="form-control" id="addImage">
+                                <label class="input-group-text" for="addImage">Upload</label>
+                            </div>
+                            <div class="col input-group">
+                                <input  value="<?=$addBigImage?>" name="addBigImage" type="file" class="form-control" id="addBigImage">
+                                <label class="input-group-text" for="addBigImage">Upload</label>
+                            </div>
                         </div>
                         <select  name="age" class="form-select mb-3" aria-label="Default select example">
                             <option selected>Возрастное ограничение</option>

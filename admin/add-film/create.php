@@ -33,7 +33,11 @@ include "../../app/controllers/admin-film.php";
                     <div class="mb-3 col-12 col-md-4 error">
                         <?=$errMsg?>
                     </div>
-                    <form action="create.php" method="post">
+                    <form action="create.php" method="post" enctype="multipart/form-data">
+                        <div class="input-group col mb-3">
+                            <label class="input-group-text" for="defId">ID</label>
+                            <input disabled value="<?=$defId?>" name="defId" type="text" class="form-control" id="defId">
+                        </div>
                         <div class="col mb-3">
                             <input value="<?=$title?>" name="title" type="text" class="form-control" placeholder="Название" aria-label="Название фильма">
                         </div>
@@ -45,8 +49,12 @@ include "../../app/controllers/admin-film.php";
                             <textarea name="description" class="form-control" id="content" rows="3" placeholder="Описание"><?=$description?></textarea>
                         </div>
                         <div class="input-group mb-3">
-                            <input  value="<?=$addFile?>" name="add-file" type="file" class="form-control" id="inputGroupFile02">
-                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            <input value="<?=$smallImage?>" name="smallImage" type="file" class="form-control" id="addImage">
+                            <label class="input-group-text" for="addImage">Small img</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input value="<?=$bigImage?>" name="bigImage" type="file" class="form-control" id="addBigImage">
+                            <label class="input-group-text" for="addBigImage">Big img</label>
                         </div>
                         <select  value="<?=$age?>" name="age" class="form-select mb-3" aria-label="Default select example">
                             <option selected>Возрастное ограничение</option>

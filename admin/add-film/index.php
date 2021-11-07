@@ -30,31 +30,33 @@ include "../../app/controllers/admin-film.php";
                 </div>
                 <div class="post-film col-12">
                     <div class="row table">
-                        <div class="col-1 id">ID</div>
-                        <div class="col-1 title">Заголовок</div>
-                        <div class="col-1 genre">Жанр</div>
-                        <div class="col-1 description">Описание</div>
-                        <div class="col-1 image">image</div>
-                        <div class="col-1 censor">Возраст</div>
-                        <div class="col-1 show-date">Дата выхода</div>
-                        <div class="col-1 duration">Время</div>
-                        <div class="col-1 country">Страна</div>
-                        <div class="col-1">Edit</div>
-                        <div class="col-1">Delete</div>
+                        <div class="col id">ID</div>
+                        <div class="col title">Заголовок</div>
+                        <div class="col genre">Жанр</div>
+                        <div class="col description">Описание</div>
+                        <div class="col image">image</div>
+                        <div class="col big-image">big-image</div>
+                        <div class="col censor">Возраст</div>
+                        <div class="col show-date">Дата выхода</div>
+                        <div class="col duration">Время</div>
+                        <div class="col country">Страна</div>
+                        <div class="col">Edit</div>
+                        <div class="col">Delete</div>
                     </div>
                     <?php foreach ($addFilms as $key => $addFilm): ?>
                     <div class="row table">
-                        <div class="col-1 id"><?=$key + 1; ?></div>
-                        <div class="col-1 title"><?=$addFilm['title']; ?></div>
-                        <div class="col-1 genre"><?=$addFilm['genre']; ?></div>
-                        <div class="col-1 description"><?=$addFilm['description']; ?></div>
-                        <div class="col-1 image"><?=$addFilm['image']; ?></div>
-                        <div class="col-1 censor"><?=$addFilm['age']; ?></div>
-                        <div class="col-1 show-date"><?=$addFilm['date']; ?></div>
-                        <div class="col-1 duration"><?=$addFilm['time']; ?></div>
-                        <div class="col-1 country"><?=$addFilm['country']; ?></div>
-                        <div class="col-1"><a class="green" href="edit.php?id=<?=$addFilm['id']; ?>">Edit</a></div>
-                        <div class="col-1"><a class="red" href="edit.php?del_id=<?=$addFilm['id']; ?>">Delete</a></div>
+                        <div class="col id"><?=$key + 1; ?></div>
+                        <div class="col title overflow-hidden"><?=$addFilm['title']; ?></div>
+                        <div class="col genre overflow-hidden"><?=$addFilm['genre']; ?></div>
+                        <div class="col description overflow-hidden"><?=$addFilm['description']; ?></div>
+                        <div class="col image overflow-hidden"><?=$addFilm['image']; ?></div>
+                        <div class="col big-image overflow-hidden"><?=$addFilm['big_image']; ?></div>
+                        <div class="col censor"><?=$addFilm['age']; ?></div>
+                        <div class="col show-date"><?=$addFilm['date']; ?></div>
+                        <div class="col duration"><?=$addFilm['time']; ?></div>
+                        <div class="col country"><?=$addFilm['country']; ?></div>
+                        <div class="col"><a class="green" href="edit.php?id=<?=$addFilm['id']; ?>">Edit</a></div>
+                        <div class="col"><a class="red" href="edit.php?del_id=<?=$addFilm['id']; ?>">Delete</a></div>
                     </div>
                     <?php endforeach; ?>
 

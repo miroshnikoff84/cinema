@@ -32,6 +32,7 @@
     color: #0c63e4;
 }
 .table div{
+    max-height: 35px;
     font-size: 12px;
     color: #868686;
 }
