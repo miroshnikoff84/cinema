@@ -15,7 +15,8 @@
 }
 
 .post-film{
-    overflow-x: scroll;
+    overflow: scroll;
+    height: 400px;
 }
 .title-table{
     border-bottom: solid 1px #3c7ee5;
@@ -49,8 +50,14 @@
 .green {
     color: #3df397;
 }
+.grey{
+    color: #9d9d9d;
+}
 .red{
     color: #ff0000;
+}
+.white{
+    color: #FFFFFF;
 }
 .id-admin{
     display: flex;

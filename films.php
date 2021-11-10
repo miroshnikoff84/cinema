@@ -1,5 +1,5 @@
 <?php
-include "app/database/db.php";
+include "app/controllers/main.php";
 
 ?>
 
@@ -17,7 +17,6 @@ include "app/database/db.php";
 </head>
 
 <body>
-
 <?php include('app/include/header.php'); ?>
 <?php include('app/include/mobile-nav.php'); ?>
 <div class="page">
@@ -38,281 +37,34 @@ include "app/database/db.php";
                     <div class="tabs-content">
                         <div class="content content-active">
                             <div class="row">
+                                <?php foreach ($alreadyInCinemas as $key => $alreadyFilm): ?>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-1.jpg" alt="slide">
+                                    <a href="film.php?id=<?=$alreadyFilm['id']; ?>">
+                                        <img src="assets/img/films/small/<?=$alreadyFilm['image']; ?>" alt="slide">
                                     </a>
-                                    <div class="censorship"><span>12+</span></div>
+                                    <div class="censorship"><span><?=$alreadyFilm['age']; ?></span></div>
                                     <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
+                                        <div class="content-item-title"><?=$alreadyFilm['title']; ?></div>
+                                        <div class="genre"><?=$alreadyFilm['genre']; ?></div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-2.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-3.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-4.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-5.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-6.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-7.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-2.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-3.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-4.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-5.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/slide-6.jpg" alt="slide">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                         <div class="content">
                             <div class="row">
+                                <?php foreach ($comingSoon as $key => $soonFilm): ?>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-1.jpg" alt="">
+                                    <a href="film.php?id=<?=$soonFilm['id']; ?>">
+                                        <img src="assets/img/films/small/<?=$soonFilm['image']; ?>" alt="slide">
                                     </a>
-                                    <div class="censorship"><span>12+</span></div>
+                                    <div class="censorship"><span><?=$soonFilm['age']; ?></span></div>
                                     <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
+                                        <div class="content-item-title"><?=$soonFilm['title']; ?></div>
+                                        <div class="genre"><?=$soonFilm['genre']; ?></div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-2.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-3.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-4.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-5.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-6.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-7.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-8.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-9.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-10.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-11.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-12.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-13.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-14.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="#">
-                                        <img src="assets/img/soon-15.jpg" alt="">
-                                    </a>
-                                    <div class="censorship"><span>12+</span></div>
-                                    <div class="wrapper">
-                                        <div class="content-item-title">Веном</div>
-                                        <div class="genre">боевик</div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>

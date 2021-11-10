@@ -1,3 +1,4 @@
+
 body {
     background: #000;
 }
@@ -78,8 +79,13 @@ a {
 }
 .content-item-title,
 .genre {
-    color: #FFF;
     font-size: 14px;
+}
+.content-item-title{
+    color: #FFFFFF;
+}
+.genre{
+    color: #969696;
 }
 .catalog-block,
 .stock-block,
@@ -179,8 +185,85 @@ a {
     margin-top: 20px;
     width: 300px;
 }
+.film-board{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
 
+}
 
+.film-board .image-board{
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 100%;
+    min-height: 192px;
+
+}
+.card-icon span{
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+.card-title{
+    color: #FFFFFF;
+}
+.card-item{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-age{
+    background: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 5px;
+}
+.card-date{
+    width: 100px;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 7px;
+    background: red;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+.card-ref{
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.film-card {
+    margin-top: -45px;
+    background: #0E0F11;
+    padding: 32px 16px 40px;
+    border-radius: 20px;
+}
+.film-board .film-card .title{
+    text-transform: uppercase;
+    font-size: 31px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.filter{
+    background: #2E3239;
+    text-align: center;
+    padding: 15px 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@media (min-width: 576px){
+    .image-board{
+        border-radius: 20px;
+    }
+}
 
 
 @media (min-width: 992px) {
@@ -190,5 +273,18 @@ a {
     .mobile-nav {
         display: none;
         
+    }
+    .film-board .film-card{
+        margin-top: -40px;
+    }
+}
+@media (min-width: 1200px){
+    .film-card{
+        position: absolute;
+        top: 60px;
+        background: transparent;
+    }
+    .film-board{
+        height: 300px;
     }
 }

@@ -26,13 +26,13 @@
                     <div class="catalog-block">
                             <a href="#"><h2>Уже в кино</h2></a>
                         <div class="slider slider-catalog">
-                            <?php foreach ($sliderCatalog as $key => $addSlide): ?>
+                            <?php foreach ($alreadyInCinemas as $key => $alreadyFilm): ?>
                             <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/small/<?=$addSlide['image']; ?>" alt="slide"></a>
-                                <div class="censorship"><span><?=$addSlide['age']; ?></span></div>
+                                <a href="film.php?id=<?=$alreadyFilm['id']; ?>"><img src="assets/img/films/small/<?=$alreadyFilm['image']; ?>" alt="slide"></a>
+                                <div class="censorship"><span><?=$alreadyFilm['age']; ?></span></div>
                                 <div class="wrapper">
-                                    <div class="content-item-title"><?=$addSlide['title']; ?></div>
-                                    <div class="genre"><?=$addSlide['genre']; ?></div>
+                                    <div class="content-item-title"><?=$alreadyFilm['title']; ?></div>
+                                    <div class="genre"><?=$alreadyFilm['genre']; ?></div>
                                 </div>
                             </div>
                             <?php endforeach; ?>
@@ -42,13 +42,13 @@
                     <div class="stock-block">
                             <a href="#"><h2>Акции</h2></a>
                         <div class="slider slider-stock">
-                            <div class="slider__item filter">
+                            <div class="slider__item">
                                 <a href="#"><img src="assets/img/stock-1.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
                                 <a href="#"><img src="assets/img/stock-2.jpg" alt="slide"></a>
                             </div>
-                            <div class="slider__item filter">
+                            <div class="slider__item">
                                 <a href="#"><img src="assets/img/stock-3.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
@@ -57,7 +57,7 @@
                             <div class="slider__item">
                                 <a href="#"><img src="assets/img/stock-5.jpg" alt="slide"></a>
                             </div>
-                            <div class="slider__item filter">
+                            <div class="slider__item">
                                 <a href="#"><img src="assets/img/stock-6.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
@@ -69,135 +69,17 @@
                     <div class="preview-block">
                             <a href="#"><h2>Скоро в кино</h2></a>
                         <div class="slider slider-preview">
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-1.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>0+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Демоник</div>
-                                    <div class="genre">Ужасы</div>
-                                </div>
-                            </div>
+                            <?php foreach ($comingSoon as $key => $soonFilm): ?>
                             <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-2.jpg" alt="slide"></a>
+                                <a href="film.php?id=<?=$soonFilm['id']; ?>"><img src="assets/img/films/big/<?=$soonFilm['big_image']; ?>" alt="slide"></a>
 
-                                <div class="censorship"><span>12+</span></div>
+                                <div class="censorship"><span><?=$soonFilm['age']; ?></span></div>
                                 <div class="wrapper">
-                                    <div class="content-item-title">Человек божий</div>
-                                    <div class="genre">биография</div>
+                                    <div class="content-item-title"><?=$soonFilm['title']; ?></div>
+                                    <div class="genre"><?=$soonFilm['genre']; ?></div>
                                 </div>
                             </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-3.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>16+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Королевская игра</div>
-                                    <div class="genre">драма</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-4.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-5.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-6.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-7.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-8.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-9.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-10.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-11.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-12.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="assets/img/films/preview/preview-13.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-14.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="assets/img/films/preview/preview-15.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                         <!-- slider-catalog -->
                     </div>
