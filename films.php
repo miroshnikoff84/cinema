@@ -39,7 +39,7 @@ include "app/controllers/main.php";
                             <div class="row">
                                 <?php foreach ($alreadyInCinemas as $key => $alreadyFilm): ?>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="film.php?id=<?=$alreadyFilm['id']; ?>">
+                                    <a href="film.php?film_id=<?=$alreadyFilm['id']; ?>">
                                         <img src="assets/img/films/small/<?=$alreadyFilm['image']; ?>" alt="slide">
                                     </a>
                                     <div class="censorship"><span><?=$alreadyFilm['age']; ?></span></div>
@@ -55,7 +55,7 @@ include "app/controllers/main.php";
                             <div class="row">
                                 <?php foreach ($comingSoon as $key => $soonFilm): ?>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
-                                    <a href="film.php?id=<?=$soonFilm['id']; ?>">
+                                    <a href="film.php?film_id=<?=$soonFilm['id']; ?>">
                                         <img src="assets/img/films/small/<?=$soonFilm['image']; ?>" alt="slide">
                                     </a>
                                     <div class="censorship"><span><?=$soonFilm['age']; ?></span></div>

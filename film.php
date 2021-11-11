@@ -24,15 +24,15 @@ include "app/controllers/main.php";
             <?php include 'app/include/sidebar.php'; ?>
             <div class="col-12 col-lg-10 page-content">
                <div class="film-board">
-                   <img class="image-board" src="assets/img/films/big/big-pic-1636320568.jpg" alt="film">
+                   <img class="image-board" src="assets/img/films/big/<?=$bigImage; ?>" alt="film">
                    <div class="film-card">
-                            <h2 class="card-title">Вечные</h2>
-                            <div class="card-genre genre">экшн</div>
-                            <div class="card-country text-white mb-3">США</div>
+                            <h2 class="card-title"><?=$title; ?></h2>
+                            <div class="card-genre genre"><?=$genre; ?></div>
+                            <div class="card-country text-white mb-3"><?=$country; ?></div>
                             <div class="card-item mb-3">
-                                <div class="card-date">C 08 Ноября</div>
-                                <div class="card-age">18+</div>
-                                <div class="card-time text-white">02:44</div>
+                                <div class="card-date">C <?=$date; ?></div>
+                                <div class="card-age"><?=$age; ?></div>
+                                <div class="card-time text-white"><?=$time; ?></div>
                             </div>
                             <div class="card-ref">
                                 <a href="#" class="card-icon">

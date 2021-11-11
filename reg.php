@@ -49,7 +49,7 @@ include "app/controllers/users.php";
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <button type="submit" name="button-reg" class="btn btn-primary">Регистрация</button>
-            <a href="log.php">Войти</a>
+            <a class="btn text-white" href="log.php">Войти</a>
         </div>
         <!--  FORM  -->
     </form>

@@ -38,7 +38,7 @@
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <button type="submit" name="button-log" class="btn btn-primary">Войти</button>
-            <a href="http://localhost/cinema/reg.php">Регистрация</a>
+            <a class="btn text-white" href="http://localhost/cinema/reg.php">Регистрация</a>
         </div>
         <!--  FORM  -->
     </form>

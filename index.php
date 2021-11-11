@@ -28,7 +28,7 @@
                         <div class="slider slider-catalog">
                             <?php foreach ($alreadyInCinemas as $key => $alreadyFilm): ?>
                             <div class="slider__item">
-                                <a href="film.php?id=<?=$alreadyFilm['id']; ?>"><img src="assets/img/films/small/<?=$alreadyFilm['image']; ?>" alt="slide"></a>
+                                <a href="film.php?film_id=<?=$alreadyFilm['id']; ?>"><img src="assets/img/films/small/<?=$alreadyFilm['image']; ?>" alt="slide"></a>
                                 <div class="censorship"><span><?=$alreadyFilm['age']; ?></span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title"><?=$alreadyFilm['title']; ?></div>
@@ -71,7 +71,7 @@
                         <div class="slider slider-preview">
                             <?php foreach ($comingSoon as $key => $soonFilm): ?>
                             <div class="slider__item">
-                                <a href="film.php?id=<?=$soonFilm['id']; ?>"><img src="assets/img/films/big/<?=$soonFilm['big_image']; ?>" alt="slide"></a>
+                                <a href="film.php?film_id=<?=$soonFilm['id']; ?>"><img src="assets/img/films/big/<?=$soonFilm['big_image']; ?>" alt="slide"></a>
 
                                 <div class="censorship"><span><?=$soonFilm['age']; ?></span></div>
                                 <div class="wrapper">

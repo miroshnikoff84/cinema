@@ -126,7 +126,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
     $films = selectOne('films', ['id' => $id]);
     $id = $films['id'];
     $title = $films['title'];
-    $genre = $films['genre'];;
+    $genre = $films['genre'];
     $description = $films['description'];
     $age = $films['age'];
     $date = $films['date'];
