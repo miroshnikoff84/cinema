@@ -16,7 +16,7 @@ foreach ($sliderCatalog as $item){
         array_push($alreadyInCinemas, $item);
     }
 }
-
+// открываем фильм по id на главной и на странице фильмы
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['film_id'])) {
     $id = $_GET['film_id'];
     $films = selectOne('films', ['id' => $id]);
