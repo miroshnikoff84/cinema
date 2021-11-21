@@ -2,26 +2,19 @@
 // topics
 include "../../path.php";
 include "../../app/database/db.php";
+require_once "../../classes/Films.class.php";
 
-
-
-$errMsg = '';
 $id = '';
-$title = '';
-$genre = '';
-$description = '';
-$age = '';
-$smallImage = '';
-$bigImage = '';
-$date = '';
-$time = '';
-$country = '';
 $defId = 0;
+$filmsOfDataBase = selectAll('films');      // Заполняем главную страницу фильмами из базы данных.
+$film = new Films();
 
-$addFilms = selectAll('films');
-
+function redirect(){
+    header('location: '. 'http://localhost/cinema/admin/add-film/index.php');
+}                          // Ф-я перенаправления на страницу index.php в админ панели
 function uploadImage($var_assoc){
     if(isset($var_assoc)){
+        global $errMsg;
         if (!empty($_FILES['smallImage']['name'])){
             $imgName = 'pic-' . time() . '.jpg';
             $fileTmpName = $_FILES['smallImage']['tmp_name'];
@@ -29,20 +22,21 @@ function uploadImage($var_assoc){
             $destination = ROOT_PATH . "\assets\img\\films\\small\\" . $imgName;
 
             if (strpos($fileType, 'image') === false){
-                die("Можно загружать только изображения.");
+                array_push($errMsg, "Можно загружать только изображения.");
             }else{
                 $result = move_uploaded_file($fileTmpName, $destination);
 
                 if ($result){
                     $_POST['smallImage'] = $imgName;
                 }else{
-                    echo 'Ошибка загрузки';
+                    array_push($errMsg, "Ошибка загрузки.");
+
                 }
 
             }
 
         }else{
-            echo 'Ошибка получения изображения';
+            array_push($errMsg, "Ошибка получения изображения.");
         }
         if (!empty($_FILES['bigImage']['name'])){
             $imgName = 'big-pic-' . time() . '.jpg';
@@ -51,126 +45,97 @@ function uploadImage($var_assoc){
             $destination = ROOT_PATH . "\assets\img\\films\\big\\" . $imgName;
 
             if (strpos($fileType, 'image') === false){
-                die("Можно загружать только изображения.");
+                array_push($errMsg, "Можно загружать только изображения.");
             }else{
                 $result = move_uploaded_file($fileTmpName, $destination);
 
                 if ($result){
                     $_POST['bigImage'] = $imgName;
                 }else{
-                    echo 'Ошибка загрузки';
+                    array_push($errMsg, "Ошибка загрузки.");
+
                 }
 
             }
 
         }else{
-            echo 'Ошибка получения изображения';
+            array_push($errMsg, "Ошибка получения изображения.");
         }
     }
-}
+}                // Ф-я загрузки картинок
 
-// Code for add films
+
+
+// Добавляем фильм
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add-film'])){
+    $film->trimInputsFilm();
 
-    $title = trim($_POST['title']);
-    $genre = trim($_POST['genre']);
-    $description = trim($_POST['description']);
-    $age = trim($_POST['age']);
-    $date = trim($_POST['date']);
-    $time = trim($_POST['time']);
-    $country = trim($_POST['country']);
-
-    if ($title === '' || empty($_FILES['bigImage']['name']) || empty($_FILES['smallImage']['name'])){
-        $errMsg = 'Не все поля заполнены!';
-    }elseif (mb_strlen($title, 'UTF8') < 1){
-        $errMsg = "В названии должно быть более одного символов!";
+    if ($film->title === '' || empty($_FILES['bigImage']['name']) || empty($_FILES['smallImage']['name'])){
+        array_push($errMsg, 'Не все поля заполнены!');
+    }elseif (mb_strlen($film->title, 'UTF8') < 1){
+        array_push($errMsg, "В названии должно быть более одного символов!");
     }else{
-        $existence = selectOne('films', ['title' => $title]);
-        if(!empty($existence['title']) && $existence['title'] === $title){
-            $errMsg = "Фильм " . $title . " уже существует";
+        $existence = selectOne('films', ['title' => $film->title]);
+        if(!empty($existence['title']) && $existence['title'] === $film->title){
+            array_push($errMsg, "Фильм с таким названием уже существует");
         }else{
             uploadImage($_POST['add-film']);
-            $smallImage = trim($_POST['smallImage']);
-            $bigImage = trim($_POST['bigImage']);
+            $film->trimInputsImage();
             $postFilm = [
-                'title' => $title,
-                'genre' => $genre,
-                'description' => $description,
-                'image' => $smallImage,
-                'big_image' => $bigImage,
-                'age' => $age,
-                'date' => $date,
-                'time' => $time,
-                'country' => $country
+                'title' => $film->title,
+                'genre' => $film->genre,
+                'description' => $film->description,
+                'image' => $film->smallImage,
+                'big_image' => $film->bigImage,
+                'age' => $film->age,
+                'date' => $film->date,
+                'time' => $film->time,
+                'country' => $film->country
             ];
             $id = insert('films', $postFilm);
             $postFilm = selectOne('films', ['id' => $id]);
-            header('location: '. 'http://localhost/cinema/admin/add-film/index.php');
+            redirect();
 
         }
     }
-}else{
-    $title = '';
-    $genre = '';
-    $description = '';
-    $smallImage = '';
-    $bigImage = '';
-    $age = '';
-    $date = '';
-    $time = '';
-    $country = '';
 }
 
-// EDIT-FILM
+// Редактируем фильм
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
     $id = $_GET['id'];
-    $films = selectOne('films', ['id' => $id]);
-    $id = $films['id'];
-    $title = $films['title'];
-    $genre = $films['genre'];
-    $description = $films['description'];
-    $age = $films['age'];
-    $date = $films['date'];
-    $time = $films['time'];
-    $country = $films['country'];
-
+    $film->addFilmData();
 }
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-film'])){
-    $title = trim($_POST['title']);
-    $genre = trim($_POST['genre']);
-    $description = trim($_POST['description']);
-    $smallImage = trim($_POST['smallImage']);
-    $age = trim($_POST['age']);
-    $date = trim($_POST['date']);
-    $time = trim($_POST['time']);
-    $country = trim($_POST['country']);
-
-
-    if ($title === '' || $date === '' || $time === ''){
-        $errMsg = 'Не все поля заполнены!';
-    }elseif (mb_strlen($title, 'UTF8') < 2){
-        $errMsg = "В названии должно быть более 2-х символов!";
+    $film = new Films();
+    $film->trimInputsFilm();
+    if ($film->title === '' || $film->date === '' || $film->time === ''){
+        array_push($errMsg, 'Не все поля заполнены!');
+    }elseif (mb_strlen($film->title, 'UTF8') < 2){
+       array_push( $errMsg, "В названии должно быть более 2-х символов!");
     }else{
+        uploadImage($_POST['edit-film']);
+        $film->trimInputsImage();
             $films = [
-                'title' => $title,
-                'genre' => $genre,
-                'description' => $description,
-                'image' => $smallImage,
-                'age' => $age,
-                'date' => $date,
-                'time' => $time,
-                'country' => $country
+                'title' => $film->title,
+                'genre' => $film->genre,
+                'description' => $film->description,
+                'image' => $film->smallImage,
+                'big_image' => $film->bigImage,
+                'age' => $film->age,
+                'date' => $film->date,
+                'time' => $film->time,
+                'country' => $film->country
             ];
             $id = $_POST['id'];
             $films = update('films', $id, $films);
-            header('location: '. 'http://localhost/cinema/admin/add-film/index.php');
+            redirect();
     }
 }
 
-// DELETE-FILM
+// Удаляем фильм
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_id'])) {
     $id = $_GET['del_id'];
 
     delete('films', $id);
-    header('location: '. 'http://localhost/cinema/admin/add-film/index.php');
+    redirect();
 }

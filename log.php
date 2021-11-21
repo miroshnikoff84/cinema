@@ -22,9 +22,11 @@
 <div class="container reg_form">
     <form class="row justify-content-md-center" method="post" action="log.php">
         <h2>Авторизация</h2>
-        <div class="mb-3 col-12 col-md-4 error">
-            <?=$errMsg?>
-        </div>
+        <?php foreach ($errMsg as $item): ?>
+            <div class="mb-3 col-12 col-md-4 error">
+                <?=$item; ?>
+            </div>
+        <?php endforeach; ?>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <label for="email" class="form-label">Email</label>

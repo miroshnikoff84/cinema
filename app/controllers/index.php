@@ -1,12 +1,13 @@
 <?php
 include '../../app/database/db.php';
+require_once '../../classes/Films.class.php';
 
 
 
 $nick = new Films();
-$nick->film['genre'] = 'mura';
-//$nick->reset();
-tt($nick->film);
+$nick->title = 'ghdfghdfghd';
+$nick->addFilmData();
+tt($nick);
 
 
 

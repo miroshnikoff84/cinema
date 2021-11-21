@@ -23,9 +23,11 @@ include "app/controllers/users.php";
 <div class="container reg_form">
     <form class="row justify-content-md-center" method="post" action="reg.php">
         <h2>Регистрация</h2>
-        <div class="mb-3 col-12 col-md-4 error">
-            <?=$errMsg?>
-        </div>
+        <?php foreach ($errMsg as $item): ?>
+            <div class="mb-3 col-12 col-md-4 error">
+                <?=$item; ?>
+            </div>
+        <?php endforeach; ?>
         <div class="w-100"></div>
         <div class="mb-3 col-12 col-md-4">
             <label for="formGroupExampleInput" class="form-label">Логин</label>

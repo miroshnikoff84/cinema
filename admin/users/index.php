@@ -49,7 +49,7 @@
                     <?php foreach ($addUsers as $key => $addUser): ?>
                     <div class="row table">
                         <div class="col-1 id-admin">
-                            <div class="col-6"><?=$key + 1; ?></div>
+                            <div class="col-6"><?=$addUser['id']; ?></div>
                             <div class="col-6"><?=$addUser['admin']; ?></div>
                         </div>
                         <div class="col-1"><?=$addUser['username']; ?></div>

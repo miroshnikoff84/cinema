@@ -2,7 +2,6 @@
 
 include "../../app/database/db.php";
 
-$errMsg = '';
 $id = '';
 $admin = '';
 $username = '';
@@ -45,9 +44,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-user'])){
     $phone = trim($_POST['phone']);
 
     if ($email === '' || $pass === '' || $admin === ''){
-        $errMsg = 'Не все поля заполнены!';
+        array_push($errMsg, 'Не все поля заполнены!');
     }elseif (mb_strlen($username, 'UTF8') < 2){
-        $errMsg = "В имене должно быть более 2-х символов!";
+        array_push($errMsg, "В имене должно быть более 2-х символов!");
     }else{
         $pass = password_hash($pass, PASSWORD_DEFAULT);
         $users = [

@@ -33,27 +33,27 @@ include "../../app/controllers/admin-film.php";
                     <div class="mb-3 col-12 col-md-4 error">
                         <?=$errMsg?>
                     </div>
-                    <form action="edit.php" method="post">
+                    <form action="edit.php" method="post" enctype="multipart/form-data">
                         <input value="<?=$id?>" name="id" type="hidden" >
 
                         <div class="col mb-3">
-                            <input value="<?=$title?>" name="title" type="text" class="form-control" placeholder="Название" aria-label="Название фильма">
+                            <input value="<?=$film->title?>" name="title" type="text" class="form-control" placeholder="Название" aria-label="Название фильма">
                         </div>
                         <div class="col mb-3">
-                            <input value="<?=$genre?>" name="genre" type="text" class="form-control" placeholder="Жанр" aria-label="Жанр">
+                            <input value="<?=$film->genre?>" name="genre" type="text" class="form-control" placeholder="Жанр" aria-label="Жанр">
                         </div>
                         <div class="col mb-3">
                             <label class="form-label" for="content"></label>
-                            <textarea name="description" class="form-control" id="content" rows="3" placeholder="Описание"><?=$description?></textarea>
+                            <textarea name="description" class="form-control" id="content" rows="3" placeholder="Описание"><?=$film->description?></textarea>
                         </div>
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
-                                <input  value="<?=$addImage?>" name="addImage" type="file" class="form-control" id="addImage">
-                                <label class="input-group-text" for="addImage">Upload</label>
+                                <input  value="<?=$film->smallImage?>" name="smallImage" type="file" class="form-control" id="smallImage">
+                                <label class="input-group-text" for="smallImage">Upload</label>
                             </div>
                             <div class="col input-group">
-                                <input  value="<?=$addBigImage?>" name="addBigImage" type="file" class="form-control" id="addBigImage">
-                                <label class="input-group-text" for="addBigImage">Upload</label>
+                                <input  value="<?=$film->bigImage?>" name="bigImage" type="file" class="form-control" id="bigImage">
+                                <label class="input-group-text" for="bigImage">Upload</label>
                             </div>
                         </div>
                         <select  name="age" class="form-select mb-3" aria-label="Default select example">
@@ -67,12 +67,12 @@ include "../../app/controllers/admin-film.php";
                         </select>
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="input-date">Дата выхода</label>
-                            <input  value="<?=$date?>" name="date" type="date" class="form-control" id="input-date">
+                            <input  value="<?=$film->date?>" name="date" type="date" class="form-control" id="input-date">
                             <label class="input-group-text" for="input-time">Время</label>
-                            <input  value="<?=$time?>" name="time" type="time" class="form-control" id="input-time">
+                            <input  value="<?=$film->time?>" name="time" type="time" class="form-control" id="input-time">
                         </div>
                         <div class="col mb-3">
-                            <input  value="<?=$country?>" name="country" type="text" class="form-control" placeholder="Страна" aria-label="Страна">
+                            <input  value="<?=$film->country?>" name="country" type="text" class="form-control" placeholder="Страна" aria-label="Страна">
                         </div>
                         <div class="col mb-3">
                             <button name="edit-film" class="btn btn-primary" type="submit">Сохранить</button>

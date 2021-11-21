@@ -43,20 +43,20 @@ include "../../app/controllers/admin-film.php";
                         <div class="col">Edit</div>
                         <div class="col">Delete</div>
                     </div>
-                    <?php foreach ($addFilms as $key => $addFilm): ?>
+                    <?php foreach ($filmsOfDataBase as $key => $film): ?>
                     <div class="row table">
-                        <div class="col id"><?=$key + 1; ?></div>
-                        <div class="col title overflow-hidden"><?=$addFilm['title']; ?></div>
-                        <div class="col genre overflow-hidden"><?=$addFilm['genre']; ?></div>
-                        <div class="col description overflow-hidden"><?=$addFilm['description']; ?></div>
-                        <div class="col image overflow-hidden"><?=$addFilm['image']; ?></div>
-                        <div class="col big-image overflow-hidden"><?=$addFilm['big_image']; ?></div>
-                        <div class="col censor"><?=$addFilm['age']; ?></div>
-                        <div class="col show-date"><?=$addFilm['date']; ?></div>
-                        <div class="col duration"><?=$addFilm['time']; ?></div>
-                        <div class="col country"><?=$addFilm['country']; ?></div>
-                        <div class="col"><a class="green" href="edit.php?id=<?=$addFilm['id']; ?>">Edit</a></div>
-                        <div class="col"><a class="red" href="edit.php?del_id=<?=$addFilm['id']; ?>">Delete</a></div>
+                        <div class="col id"><?=$film['id']; ?></div>
+                        <div class="col title overflow-hidden"><?=$film['title']; ?></div>
+                        <div class="col genre overflow-hidden"><?=$film['genre']; ?></div>
+                        <div class="col description overflow-hidden"><?=$film['description']; ?></div>
+                        <div class="col image overflow-hidden"><?=$film['image']; ?></div>
+                        <div class="col big-image overflow-hidden"><?=$film['big_image']; ?></div>
+                        <div class="col censor"><?=$film['age']; ?></div>
+                        <div class="col show-date"><?=$film['date']; ?></div>
+                        <div class="col duration"><?=$film['time']; ?></div>
+                        <div class="col country"><?=$film['country']; ?></div>
+                        <div class="col"><a class="green" href="edit.php?id=<?=$film['id']; ?>">Edit</a></div>
+                        <div class="col"><a class="red" href="edit.php?del_id=<?=$film['id']; ?>">Delete</a></div>
                     </div>
                     <?php endforeach; ?>
 

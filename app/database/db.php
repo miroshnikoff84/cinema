@@ -8,6 +8,9 @@ function tt($value){
     echo '</pre>';
     exit();
 }
+$errMsg = [];
+
+
 // Проверка выполнения запроса к БД
 function dbCheckError($query){
     $errInfo = $query->errorInfo();
@@ -17,7 +20,6 @@ function dbCheckError($query){
     }
     return true;
 }
-
 
 
 // Запрос на получение данных c одной таблицы
@@ -68,7 +70,6 @@ function selectOne($table, $params = []){
 
     }
 
-//    $sql = $sql . " LIMIT 1";
     $query = $pdo->prepare($sql);
     $query->execute();
     dbCheckError($query);
@@ -125,8 +126,6 @@ function update($table, $id, $params){
 // Удаление
 function delete($table, $id){
     global $pdo;
-
-
     $sql = "DELETE FROM $table WHERE id =" . $id;
     $query = $pdo->prepare($sql);
     $query->execute();
