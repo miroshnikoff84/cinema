@@ -47,7 +47,180 @@ include "app/controllers/main.php";
 
                        </div>
                    </div>
-                <div class="filter text-white">Фильтровать</div>
+                <div class="filter text-white mb-4">Фильтровать</div>
+
+                <div class="session-box mb-4">
+                    <div class="d-lg-flex">
+                        <div class="md-title">
+                            <a href="#">Паллас</a>
+                        </div>
+                        <div class="adds">проспект Ленина д.8</div>
+                    </div>
+                    <div class="slider slider-session">
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="session-box mb-4">
+                    <div class="d-lg-flex">
+                        <div class="md-title">
+                            <a href="#">Паллас</a>
+                        </div>
+                        <div class="adds">проспект Ленина д.8</div>
+                    </div>
+                    <div class="slider slider-session">
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider__item">
+                            <a href="#">
+                                <div class="head"></div>
+                                <div class="title"></div>
+                                <div class="hall-wrapper">
+                                    <div class="ticket d-flex flex-wrap">
+                                        <div class="name">Зал 7</div>
+                                        <div class="place">
+                                            <img src="assets/img/zal/green-chair.svg" alt="place">
+                                        </div>
+                                    </div>
+                                    <div class="stub"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             </div>

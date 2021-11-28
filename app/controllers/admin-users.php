@@ -1,64 +1,58 @@
 <?php
 
 include "../../app/database/db.php";
+require_once "../../classes/Users.class.php";
 
 $id = '';
-$admin = '';
-$username = '';
-$email = '';
-$pass = '';
-$firstName = '';
-$secondName = '';
-$lastName = '';
-$birthday = '';
-$phone = '';
-
-$addUsers = selectAll('users');
+$foundUser = '';
+$usersOfDataBase = selectAll('users');
+$user = new Users();
+// SEARCH-USER
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_user'])) {
+    $user = new Users();
+    $user->trimInputsUser();
+    $searchUser = (array) $user;
+    foreach ($searchUser as $key=>$value ){
+        if(empty($value)){
+            unset($searchUser[$key]);
+        }
+    }
+    if (empty($searchUser)){
+        array_push($errMsg, 'Пользователь не найден!');
+    }else{
+        $foundUser = selectOne('users', $searchUser);
+        if(!$foundUser){
+            array_push($errMsg, 'Пользователь не найден!');
+        }
+    }
+}
 
 
 // EDIT-USER
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){
     $id = $_GET['id'];
-    $users = selectOne('users', ['id' => $id]);
-    $id = $users['id'];
-    $admin = $users['admin'];
-    $username = $users['username'];;
-    $email = $users['email'];
-    $pass = $users['password'];
-    $firstName = $users['first_name'];
-    $secondName = $users['second_name'];
-    $lastName = $users['last_name'];
-    $birthday = $users['birthday'];
-    $phone = $users['phone'];
-
+    $user->addUserData();
 }
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit-user'])){
-    $admin = trim($_POST['admin']);
-    $username = trim($_POST['username']);
-    $email = trim($_POST['email']);
-    $pass = trim($_POST['password']);
-    $firstName = trim($_POST['firstName']);
-    $secondName = trim($_POST['secondName']);
-    $lastName = trim($_POST['lastName']);
-    $birthday = trim($_POST['birthday']);
-    $phone = trim($_POST['phone']);
+    $user = new Users();
+    $user->trimInputsUser();
 
-    if ($email === '' || $pass === '' || $admin === ''){
+    if ($user->email === '' || $user->pass === '' || $user->admin === ''){
         array_push($errMsg, 'Не все поля заполнены!');
-    }elseif (mb_strlen($username, 'UTF8') < 2){
+    }elseif (mb_strlen($user->username, 'UTF8') < 2){
         array_push($errMsg, "В имене должно быть более 2-х символов!");
     }else{
-        $pass = password_hash($pass, PASSWORD_DEFAULT);
+        $pass = password_hash($user->pass, PASSWORD_DEFAULT);
         $users = [
-            'admin' => $admin,
-            'username' => $username,
-            'email' => $email,
-            'password' => $pass,
-            'first_name' => $firstName,
-            'second_name' => $secondName,
-            'last_name' => $lastName,
-            'birthday' => $birthday,
-            'phone' => $phone
+            'admin' => $user->admin,
+            'username' => $user->username,
+            'email' => $user->email,
+            'password' => $user->pass,
+            'first_name' => $user->firstName,
+            'second_name' => $user->secondName,
+            'last_name' => $user->lastName,
+            'birthday' => $user->birthday,
+            'phone' => $user->phone
         ];
         $id = $_POST['id'];
         $users = update('users', $id, $users);

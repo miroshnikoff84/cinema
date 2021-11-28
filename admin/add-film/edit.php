@@ -30,9 +30,11 @@ include "../../app/controllers/admin-film.php";
                     <div class="col"><?php include '../../app/include/admin-btn.php'; ?></div>
                 </div>
                 <div class="add-post-film col-12">
-                    <div class="mb-3 col-12 col-md-4 error">
-                        <?=$errMsg?>
-                    </div>
+                    <?php foreach ($errMsg as $item): ?>
+                        <div class="mb-3 col-12 col-md-4 error">
+                            <?=$item; ?>
+                        </div>
+                    <?php endforeach; ?>
                     <form action="edit.php" method="post" enctype="multipart/form-data">
                         <input value="<?=$id?>" name="id" type="hidden" >
 

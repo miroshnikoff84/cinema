@@ -12,6 +12,7 @@ class Users
     public $lastName;
     public $birthday;
     public $phone;
+    public $created;
 
     public function addUserData(){
         $user = selectOne('users', ['id' => $_GET['id']]);
@@ -27,14 +28,22 @@ class Users
         $this->phone = $user['phone'];
     }
     public function trimInputsUser(){
+        if (isset($_POST['admin'])){
+            $this->admin = trim($_POST['admin']);
+        }
         $this->username = trim($_POST['username']);
         $this->email = trim($_POST['email']);
-        $this->pass = trim($_POST['password']);
+        if (isset($_POST['password'])){
+            $this->pass = trim($_POST['password']);
+        }
         $this->firstName = trim($_POST['first_name']);
         $this->secondName = trim($_POST['second_name']);
         $this->lastName = trim($_POST['last_name']);
         $this->birthday = trim($_POST['birthday']);
         $this->phone = trim($_POST['phone']);
+        if(isset($_POST['created'])){
+            $this->created = trim($_POST['created']);
+        }
     }
 
 }

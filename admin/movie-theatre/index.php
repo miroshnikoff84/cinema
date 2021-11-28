@@ -1,5 +1,5 @@
-<?php include "../../path.php";
-include "../../app/database/db.php";
+<?php
+include "../../app/controllers/admin-users.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,44 +12,113 @@ include "../../app/database/db.php";
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/slick-slider.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <title>ADMIN-MOVIE THEATRES</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <title>ADMIN-MOVIE_THEATRES</title>
 </head>
 
 <body>
 
 <?php include '../../app/include/header.php'; ?>
-<?php include '../../app/include/mobile-nav.php'; ?>
 <div class="page">
     <div class="container">
         <div class="row page-wrap">
             <?php include '../../app/include/admin-sidebar.php'; ?>
-            <div class="col-12 col-lg-10 page-content">
-                <h2>ADMIN-MOVIE THEATRES</h2>
-                <?php include '../../app/include/admin-btn.php'; ?>
-                <div class="posts col-12">
-                    <div class="row title-table">
-                        <div class="col-1 id">ID</div>
-                        <div class="col-1 title">Заголовок</div>
-                        <div class="col-1 description">Описание</div>
-                        <div class="col-1 genre">жанр</div>
-                        <div class="col-1 image">изображение</div>
-                        <div class="col-1 censor">цензура</div>
-                        <div class="col-1 show-date">начало показа</div>
-                        <div class="col-1 duration">продолжительность</div>
-                        <div class="col-1 country">страна</div>
-                    </div>
-                    <div class="row title-table">
-                        <div class="id">1</div>
-                        <div class="title">Веном</div>
-                        <div class="description">еыр,Мбплрлвплоро залпорзвшщп павшорвзщшпо</div>
-                        <div class="genre">боевик</div>
-                        <div class="image">изображение</div>
-                        <div class="censor">цензура</div>
-                        <div class="show-date">начало показа</div>
-                        <div class="duration">1:25:00</div>
-                        <div class="country">Россия</div>
-                    </div>
+            <div class="col-12 col-lg-10">
+                <div class="row ">
+                    <h2 class="col">ADMIN-MOVIE_THEATRES</h2>
                 </div>
+                <form action="index.php" method="post">
+                    <div class="row input-group mb-3 g-3">
+                        <div class="col input-group">
+                            <label class="input-group-text" for="login">Название</label>
+                            <input name="title" type="text" class="form-control" id="title">
+                        </div>
+                        <div class="col input-group">
+                            <label class="input-group-text" for="adds">Адрес</label>
+                            <input name="adds" type="text" class="form-control" id="adds">
+                        </div>
+                        <div class="col input-group">
+                            <label class="input-group-text" for="metro">Метро</label>
+                            <input name="metro" type="text" class="form-control" id="metro">
+                        </div>
+                    </div>
+                    <div class="row input-group mb-3 g-3">
+                        <div class="col input-group">
+                            <label class="input-group-text" for="number_of_halls">Имя</label>
+                            <input name="number_of_halls" type="text" class="form-control" id="number_of_halls">
+                        </div>
+                        <div class="col input-group">
+                            <label class="input-group-text" for="second-name">Отчество</label>
+                            <input name="second_name" type="text" class="form-control" id="second-name">
+                        </div>
+                        <div class="col input-group">
+                            <label class="input-group-text" for="last-name">Фамилия</label>
+                            <input name="last_name" type="text" class="form-control" id="last-name">
+                        </div>
+                    </div>
+                    <div class="row  input-group mb-3 g-3">
+
+                        <div class="col input-group">
+                            <label class="input-group-text" for="input-tel">Телефон</label>
+                            <input name="phone" type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
+                        </div>
+                        <div class="col input-group">
+                            <label class="input-group-text" for="input-date">Аккаунт создан</label>
+                            <input name="created" type="date" class="form-control" id="input-date">
+                        </div>
+                    </div>
+                    <button type="submit" name="search_user" class=" mb-3 btn btn-primary">Поиск</button>
+                </form>
+                <?php if(!empty($foundUser)): ?>
+                    <div class="post-film col-12">
+                        <div class="row table">
+                            <div class="col-1 id-admin">
+                                <div class="col-6 id">ID</div>
+                                <div class="col-6 admin">Статус</div>
+                            </div>
+                            <div class="col-1">Логин</div>
+                            <div class="col-2">Email</div>
+                            <div class="col-1">Имя</div>
+                            <div class="col-1">Отчество</div>
+                            <div class="col-1">Фамилия</div>
+                            <div class="col-1">Дата рождения</div>
+                            <div class="col-1">Телефон</div>
+                            <div class="col-1 id-admin">
+                                <div class="col-6 id">Edit</div>
+                                <div class="col-6 admin">Delete</div>
+                            </div>
+                        </div>
+                        <div class="row table">
+                            <div class="col-1 id-admin">
+                                <div class="col-6"><?=$foundUser['id']; ?></div>
+                                <div class="col-6"><?=$foundUser['admin']; ?></div>
+                            </div>
+                            <div class="col-1"><?=$foundUser['username']; ?></div>
+                            <div class="col-2"><?=$foundUser['email']; ?></div>
+                            <div class="col-1"><?=$foundUser['first_name']; ?></div>
+                            <div class="col-1"><?=$foundUser['second_name']; ?></div>
+                            <div class="col-1"><?=$foundUser['last_name']; ?></div>
+                            <div class="col-1"><?=$foundUser['birthday']; ?></div>
+                            <div class="col-1"><?=$foundUser['phone']; ?></div>
+                            <div class="col-1 id-admin">
+                                <div class="col-6"><a href="edit.php?id=<?=$foundUser['id']; ?>" class="green">Edit</a></div>
+                                <?php if ($foundUser['admin'] == 0): ?>
+                                    <div class="col-6"><a href="edit.php?del_user_id=<?=$foundUser['id']; ?>" class="red">Delete</a></div>
+                                <?php endif; ?>
+                            </div>
+                            <?php if ($foundUser['admin'] == 0): ?>
+                                <div class="col"><a href="edit.php?id=<?=$foundUser['id']; ?>" class="green">Orders</a></div>
+                            <?php endif; ?>
+
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($errMsg as $item): ?>
+                        <div class="mt-3 col-12 col-md-4 error">
+                            <?=$item; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

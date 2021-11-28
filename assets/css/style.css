@@ -45,7 +45,7 @@ h1, h2 {
     text-align: center;
     height: 100%;
     padding: 10px 20px;
-    background: rgb(22, 22, 22);
+    background: rgb(46 50 57);
     border-radius: 5px;
 }
 .side-item {
@@ -127,7 +127,7 @@ a {
     width: 130px;
     height: 40px;
     border-radius: 5px;
-    background-color: gray;
+    background-color: rgb(46 50 57);
     margin-right: 10px;
     cursor: pointer;
     color: #FFF;
@@ -257,6 +257,30 @@ a {
     padding: 15px 16px;
     border-radius: 10px;
     margin-top: 20px;
+}
+.hall-wrapper{
+    max-width: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.hall-wrapper .ticket{
+    border-radius: 20px 5px 5px 5px;
+    padding: 20px;
+    width: 70%;
+    height: 100px;
+    background: linear-gradient(270deg, rgb(43 46 52) 15%, rgb(15 17 22) 92%);
+}
+.hall-wrapper .ticket img {
+    width: 15px;
+    margin-left: 20px;
+}
+.hall-wrapper .stub{
+    border-radius: 5px 20px 5px 5px;
+    padding: 20px;
+    width: 29%;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(43 46 51) 15%, rgb(15 17 22) 92%);
 }
 
 @media (min-width: 576px){

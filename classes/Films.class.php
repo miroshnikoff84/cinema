@@ -39,10 +39,10 @@ class Films
         $this->smallImage = trim($_POST['smallImage']);
         $this->bigImage = trim($_POST['bigImage']);
     }
-    public function resetFilm()
-    {
-        foreach ($this as &$value) {
-            $value = '';
-        }
-    }
+//    public function resetFilm()
+//    {
+//        foreach ($this as &$value) {
+//            $value = '';
+//        }
+//    }
 }

@@ -34,43 +34,43 @@ include "../../app/controllers/admin-users.php";
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="login">Логин</label>
-                                <input value="<?=$username?>" name="username" type="text" class="form-control" aria-label="Логин" id="login">
+                                <input value="<?=$user->username?>" name="username" type="text" class="form-control" aria-label="Логин" id="login">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="email">Email</label>
-                                <input value="<?=$email?>" name="email" type="email" class="form-control"  autocomplete="off" id="email">
+                                <input value="<?=$user->email?>" name="email" type="email" class="form-control"  autocomplete="off" id="email">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="password">Пароль</label>
-                                <input value="<?=$pass?>" name="password" type="password" class="form-control"  autocomplete="off" id="password">
+                                <input value="<?=$user->pass?>" name="password" type="password" class="form-control"  autocomplete="off" id="password">
                             </div>
                         </div>
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="name">Имя</label>
-                                <input value="<?=$firstName?>" name="firstName" type="text" class="form-control" id="name">
+                                <input value="<?=$user->firstName?>" name="first_name" type="text" class="form-control" id="name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="second-name">Отчество</label>
-                                <input value="<?=$secondName?>" name="secondName" type="text" class="form-control" id="second-name">
+                                <input value="<?=$user->secondName?>" name="second_name" type="text" class="form-control" id="second-name">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="last-name">Фамилия</label>
-                                <input value="<?=$lastName?>" name="lastName" type="text" class="form-control" id="last-name">
+                                <input value="<?=$user->lastName?>" name="last_name" type="text" class="form-control" id="last-name">
                             </div>
                         </div>
                         <div class="row  input-group mb-3 g-3">
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Дата рождения</label>
-                                <input value="<?=$birthday?>" name="birthday" type="date" class="form-control" id="input-date">
+                                <input value="<?=$user->birthday?>" name="birthday" type="date" class="form-control" id="input-date">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-tel">Телефон</label>
-                                <input value="<?=$phone?>" name="phone" type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
+                                <input value="<?=$user->phone?>" name="phone" type="tel" class="form-control" id="input-tel" placeholder="+7(___)___-__-__">
                             </div>
                             <div class="col input-group">
                                 <label class="input-group-text" for="input-date">Аккаунт создан</label>
-                                <input value="<?=$create?>" name="create" type="date" class="form-control" id="input-date">
+                                <input value="<?=$user->create?>" name="create" type="date" class="form-control" id="input-date">
                             </div>
                         </div>
                         <select name="admin" class="w-25 form-select mb-3">
