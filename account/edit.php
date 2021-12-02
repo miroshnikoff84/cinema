@@ -29,7 +29,7 @@ include "../app/controllers/set-account.php";
                     <h2 class="col">Личный кабинет</h2>
                 </div>
                 <div class="col-12">
-                    <form action="index.php" method="post">
+                    <form action="../app/index.php" method="post">
                         <input value="<?=$id?>" name="id" type="hidden" >
                         <div class="row input-group mb-3 g-3">
                             <div class="col input-group">

@@ -27,7 +27,7 @@
                 <div class="row ">
                     <h2 class="col">ADMIN-USERS</h2>
                 </div>
-                <form action="index.php" method="post">
+                <form action="../../app/index.php" method="post">
                     <div class="row input-group mb-3 g-3">
                         <div class="col input-group">
                             <label class="input-group-text" for="login">Логин</label>

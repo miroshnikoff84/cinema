@@ -1,5 +1,6 @@
 <?php
-include "../../app/controllers/admin-film.php";
+
+require_once "../../app/controllers/admin-film.php";
 ?>
 
 <!DOCTYPE html>

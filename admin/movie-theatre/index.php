@@ -27,7 +27,7 @@ include "../../app/controllers/admin-users.php";
                 <div class="row ">
                     <h2 class="col">ADMIN-MOVIE_THEATRES</h2>
                 </div>
-                <form action="index.php" method="post">
+                <form action="../../app/index.php" method="post">
                     <div class="row input-group mb-3 g-3">
                         <div class="col input-group">
                             <label class="input-group-text" for="login">Название</label>
