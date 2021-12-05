@@ -1,7 +1,7 @@
 <?php
 include "path.php";
 include "app/database/db.php";
-include "../../app/controllers/admin-film.php";
+include "../../app/controller/admin-film.php";
 ?>
 
 <!DOCTYPE html>
