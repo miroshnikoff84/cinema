@@ -2,9 +2,9 @@
 // Основной маршрутный контроллер созданный по шаблону singleton
 namespace core\base\controller;
 
-use core\base\exceptions\RouteException;
 use core\base\settings\Settings;
 use core\base\settings\ShopSettings;
+use function Sodium\add;
 
 class RouteController
 {
@@ -34,28 +34,29 @@ class RouteController
         $address_str = $_SERVER['REQUEST_URI'];
 
         if(strrpos($address_str, '/') === strlen($address_str) - 1 && strrpos($address_str, '/') !== 0){
-
-//            header(rtrim($address_str, '/'), 301);
+            echo 'redirect';
             $this->redirect(rtrim($address_str, '/'), 301);
+//            header(rtrim($address_str, '/'), 301);
         }
+
         $path = substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER['PHP_SELF'], 'index.php'));
 
         if($path === PATH){
             $this->routes = Settings::get('routes');
+
             if(!$this->routes) throw new RouteException('Сайт на техническом обслуживании');
 
-            if(strpos($address_str, $this->routes['admin']['alias']) === strlen(PATH)){
+            $url = explode('/', substr($address_str, strlen(PATH)));
 
-                $url = explode('/', substr($address_str, strlen(PATH . $this->routes['admin']['alias']) + 1));
+            if($url[0] && $url[0] === $this->routes['admin']['alias']){
+                array_shift($url);
 
                 if($url[0] && is_dir($_SERVER['DOCUMENT_ROOT'] . PATH . $this->routes['plugins']['path'] . $url[0])){
-
                     $plugin = array_shift($url);
 
                     $pluginSettings = $this->routes['settings']['path'] . ucfirst($plugin . 'Settings');
 
                     if(file_exists($_SERVER['DOCUMENT_ROOT'] . PATH . $pluginSettings . '.php')){
-
                         $pluginSettings = str_replace('/', '\\', $pluginSettings);
                         $this->routes = $pluginSettings::get('routes');
                     }
@@ -78,7 +79,6 @@ class RouteController
                 }
 
             }else{
-                $url = explode('/', substr($address_str, strlen(PATH)));
 
                 $hrUrl = $this->routes['user']['hrUrl'];
 
@@ -111,6 +111,7 @@ class RouteController
                 }
             }
 
+
         }else{
             try{
                 throw new \Exception('Не корректная директория сайта');
@@ -123,8 +124,8 @@ class RouteController
 
     private function createRoute($var, $arr){
         $route = [];
+        if(!empty($arr[0])){
 
-        if(!empty($var[0])){
             if($this->routes[$var]['routes'][$arr[0]]){
                 $route = explode('/', $this->routes[$var]['routes'][$arr[0]]);
 
@@ -133,6 +134,7 @@ class RouteController
                 $this->controller .= ucfirst($arr[0] . 'Controller');
             }
         }else{
+
             $this->controller .= $this->routes['default']['controller'];
         }
         $this->inputMethod = $route[1] ? $route[1] : $this->routes['default']['inputMethod'];
