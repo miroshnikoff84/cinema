@@ -1,3 +1,5 @@
+<?php include("path.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,47 +7,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/slick-slider.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick-slider.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Фильмы</title>
 </head>
 
 <body>
-<header class="header">
-    <div class="container">
-        <div class="row"><a class="header-promo" href="#"><img src="../img/header-promo.jpg" alt="promo"></a></div>
-        <div class="row header-wrap">
-            <div class="col-6 header-left"><a href="../index.html"><img src="../img/logo.svg" alt="" class="icon"></a></div>
-            <div class="col-6 header-right">
-                <a href="#"><span class="city-label">Санкт-Петербург</span><img src="../img/city.svg" alt=""
-                                                                                class="icon"></a>
-                <a href="#"><img src="../img/user.svg" alt="" class="icon"></a>
-            </div>
-        </div>
-    </div>
-</header>
-<nav class="mobile-nav">
-    <ul>
-        <li><a href="#"><span><img src="../img/" class="icon" alt=""></span></a></li>
-        <li><a href="#"><span><img src="../img/user.svg" class="icon" alt=""></span></a></li>
-        <li><a href="#"><span><img src="../img/user.svg" class="icon" alt=""></span></a></li>
-        <li><a href="#"><span><img src="../img/user.svg" class="icon" alt=""></span></a></li>
-    </ul>
-</nav>
+
+<?php include('app/include/header.php'); ?>
+<?php include('app/include/mobile-nav.php'); ?>
 <div class="page">
     <div class="container">
         <div class="row page-wrap">
-            <div class="col-2 side-wrap">
-                <ul class="side-nav">
-                    <li class="side-item"><a href="#">Фильмы</a></li>
-                    <li class="side-item"><a href="#">Расписание</a></li>
-                    <li class="side-item"><a href="#">Акции</a></li>
-                    <li class="side-item"><a href="#">Кинотеатры</a></li>
-                    <li class="side-item"><a href="#">Программа лояльности</a></li>
-                    <li class="side-item"><a href="#">Посетителям</a></li>
-                </ul>
-            </div>
+            <?php include('app/include/sidebar.php'); ?>
             <div class="col-12 col-lg-10 page-content">
                 <h2>Фильмы</h2>
                 <div class="tabs">
@@ -62,7 +37,7 @@
                             <div class="row">
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-1.jpg" alt="slide">
+                                        <img src="assets/img/slide-1.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -72,7 +47,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-2.jpg" alt="slide">
+                                        <img src="assets/img/slide-2.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -82,7 +57,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-3.jpg" alt="slide">
+                                        <img src="assets/img/slide-3.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -92,7 +67,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-4.jpg" alt="slide">
+                                        <img src="assets/img/slide-4.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -102,7 +77,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-5.jpg" alt="slide">
+                                        <img src="assets/img/slide-5.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -112,7 +87,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-6.jpg" alt="slide">
+                                        <img src="assets/img/slide-6.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -122,7 +97,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-7.jpg" alt="slide">
+                                        <img src="assets/img/slide-7.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -132,7 +107,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-2.jpg" alt="slide">
+                                        <img src="assets/img/slide-2.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -142,7 +117,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-3.jpg" alt="slide">
+                                        <img src="assets/img/slide-3.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -152,7 +127,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-4.jpg" alt="slide">
+                                        <img src="assets/img/slide-4.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -162,7 +137,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-5.jpg" alt="slide">
+                                        <img src="assets/img/slide-5.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -172,7 +147,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/slide-6.jpg" alt="slide">
+                                        <img src="assets/img/slide-6.jpg" alt="slide">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -186,7 +161,7 @@
                             <div class="row">
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-1.jpg" alt="">
+                                        <img src="assets/img/soon-1.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -196,7 +171,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-2.jpg" alt="">
+                                        <img src="assets/img/soon-2.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -206,7 +181,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-3.jpg" alt="">
+                                        <img src="assets/img/soon-3.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -216,7 +191,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-4.jpg" alt="">
+                                        <img src="assets/img/soon-4.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -226,7 +201,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-5.jpg" alt="">
+                                        <img src="assets/img/soon-5.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -236,7 +211,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-6.jpg" alt="">
+                                        <img src="assets/img/soon-6.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -246,7 +221,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-7.jpg" alt="">
+                                        <img src="assets/img/soon-7.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -256,7 +231,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-8.jpg" alt="">
+                                        <img src="assets/img/soon-8.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -266,7 +241,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-9.jpg" alt="">
+                                        <img src="assets/img/soon-9.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -276,7 +251,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-10.jpg" alt="">
+                                        <img src="assets/img/soon-10.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -286,7 +261,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-11.jpg" alt="">
+                                        <img src="assets/img/soon-11.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -296,7 +271,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-12.jpg" alt="">
+                                        <img src="assets/img/soon-12.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -307,7 +282,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-13.jpg" alt="">
+                                        <img src="assets/img/soon-13.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -317,7 +292,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-14.jpg" alt="">
+                                        <img src="assets/img/soon-14.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -327,7 +302,7 @@
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 content-item">
                                     <a href="#">
-                                        <img src="../img/soon-15.jpg" alt="">
+                                        <img src="assets/img/soon-15.jpg" alt="">
                                     </a>
                                     <div class="censorship"><span>12+</span></div>
                                     <div class="wrapper">
@@ -343,11 +318,11 @@
         </div>
     </div>
 </div>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/jquery-3.6.0.min.js"></script>
-<script src="../js/slick.min.js"></script>
-<script src="../js/slider.js"></script>
-<script src="../js/script.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>

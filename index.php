@@ -1,3 +1,5 @@
+<?php include("path.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,55 +7,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/slick-slider.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick-slider.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>CINEMA CLUB</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="row"><a class="header-promo" href="#"><img src="./img/header-promo.jpg" alt="promo"></a></div>
-            <div class="row header-wrap">
-                <div class="col-6 header-left"><a href="#"><img src="./img/logo.svg" alt="" class="icon"></a></div>
-                <div class="col-6 header-right">
-                    <a href="#"><span class="city-label">Санкт-Петербург</span><img src="./img/city.svg" alt=""
-                            class="icon"></a>
-                    <a href="#"><img src="./img/user.svg" alt="" class="icon"></a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="#"><span><img src="./img/" class="icon" alt=""></span></a></li>
-            <li><a href="./pages/films.html"><span><img src="./img/user.svg" class="icon" alt=""></span></a></li>
-            <li><a href="#"><span><img src="./img/user.svg" class="icon" alt=""></span></a></li>
-            <li><a href="#"><span><img src="./img/user.svg" class="icon" alt=""></span></a></li>
-        </ul>
-    </nav>
+
+<?php include('app/include/header.php'); ?>
+<?php include('app/include/mobile-nav.php'); ?>
     <div class="page">
         <div class="container">
             <div class="row page-wrap">
-                <div class="col-2 side-wrap">
-                    <ul class="side-nav">
-                        <li class="side-item"><a href="./pages/films.html">Фильмы</a></li>
-                        <li class="side-item"><a href="#">Расписание</a></li>
-                        <li class="side-item"><a href="#">Акции</a></li>
-                        <li class="side-item"><a href="#">Кинотеатры</a></li>
-                        <li class="side-item"><a href="#">Программа лояльности</a></li>
-                        <li class="side-item"><a href="#">Посетителям</a></li>
-                    </ul>
-                </div>
+                <?php include('app/include/sidebar.php'); ?>
                 <div class="col-12 col-lg-10 page-content">
                     <div class="catalog-block">
-                        <h2>
-                            <a href="#">Уже в кино</a>
-                        </h2>
+                            <a href="films.php"><h2>Уже в кино</h2></a>
                         <div class="slider slider-catalog">
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/slide-1.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-1.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Не время убивать</div>
@@ -61,7 +34,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/slide-2.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-2.jpg" alt="slide"></a>
                                 <div class="censorship"><span>6+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Босс молокосос 2</div>
@@ -69,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/slide-3.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-3.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Шан-чи: Легенда десяти колец</div>
@@ -77,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/slide-4.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-4.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Дюна</div>
@@ -85,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/slide-5.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-5.jpg" alt="slide"></a>
                                 <div class="censorship"><span>16+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном 2</div>
@@ -93,7 +66,7 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/slide-6.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-6.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Семейка Адамс: Горящий тур</div>
@@ -101,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/slide-7.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/slide-7.jpg" alt="slide"></a>
                                 <div class="censorship"><span>0+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Мой маленький пони</div>
@@ -112,41 +85,37 @@
                         <!-- catalog-block -->
                     </div>
                     <div class="stock-block">
-                        <h2>
-                            <a href="#">Акции</a>
-                        </h2>
+                            <a href="#"><h2>Акции</h2></a>
                         <div class="slider slider-stock">
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/stock-1.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-1.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/stock-2.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-2.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/stock-3.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-3.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/stock-4.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-4.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/stock-5.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-5.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/stock-6.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-6.jpg" alt="slide"></a>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/stock-7.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/stock-7.jpg" alt="slide"></a>
                             </div>
                         </div>
                         <!-- slider-catalog -->
                     </div>
                     <div class="preview-block">
-                        <h2>
-                            <a href="#">Скоро в кино</a>
-                        </h2>
+                            <a href="films.php"><h2>Скоро в кино</h2></a>
                         <div class="slider slider-preview">
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-1.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-1.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>0+</span></div>
                                 <div class="wrapper">
@@ -155,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-2.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-2.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
@@ -164,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-3.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-3.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>16+</span></div>
                                 <div class="wrapper">
@@ -173,7 +142,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-4.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-4.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
@@ -182,25 +151,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-5.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-6.jpg" alt="slide"></a>
-
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="img/preview-7.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-5.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
@@ -209,7 +160,7 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-8.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-6.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
@@ -218,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-9.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-7.jpg" alt="slide"></a>
 
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
@@ -227,7 +178,8 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-10.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-8.jpg" alt="slide"></a>
+
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном</div>
@@ -235,15 +187,8 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-11.jpg" alt="slide"></a>
-                                <div class="censorship"><span>12+</span></div>
-                                <div class="wrapper">
-                                    <div class="content-item-title">Веном</div>
-                                    <div class="genre">боевик</div>
-                                </div>
-                            </div>
-                            <div class="slider__item">
-                                <a href="#"><img src="img/preview-12.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-9.jpg" alt="slide"></a>
+
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном</div>
@@ -251,7 +196,7 @@
                                 </div>
                             </div>
                             <div class="slider__item filter">
-                                <a href="#"><img src="img/preview-13.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-10.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном</div>
@@ -259,7 +204,7 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-14.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-11.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном</div>
@@ -267,7 +212,31 @@
                                 </div>
                             </div>
                             <div class="slider__item">
-                                <a href="#"><img src="img/preview-15.jpg" alt="slide"></a>
+                                <a href="#"><img src="assets/img/preview-12.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item filter">
+                                <a href="#"><img src="assets/img/preview-13.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="assets/img/preview-14.jpg" alt="slide"></a>
+                                <div class="censorship"><span>12+</span></div>
+                                <div class="wrapper">
+                                    <div class="content-item-title">Веном</div>
+                                    <div class="genre">боевик</div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="#"><img src="assets/img/preview-15.jpg" alt="slide"></a>
                                 <div class="censorship"><span>12+</span></div>
                                 <div class="wrapper">
                                     <div class="content-item-title">Веном</div>
@@ -282,10 +251,10 @@
         </div>
     </div>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/slider.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/slider.js"></script>
 </body>
 
 </html>
