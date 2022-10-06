@@ -1,0 +1,18 @@
+<svg width="203.00000000000003" height="208" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="205" height="210" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse transform="rotate(90 101.25,103.25000000000001) " ry="94" rx="93" id="svg_16" cy="103.25" cx="101.25" fill-opacity="null" stroke-width="12.5" stroke="#ffffff" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(90 61.06534576416015,107.48717498779298) " stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="107.48717" x2="98.83523" y1="107.48717" x1="23.29546" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(30 131.4999084472656,63.2391471862793) " stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="63.23915" x2="169.36947" y1="63.23915" x1="93.63035" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(150 72.36965942382812,63.239143371582024) " stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="63.23914" x2="110.23922" y1="63.23914" x1="34.5001" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(90 140.1955261230469,107.71172332763673) " stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="107.71172" x2="177.75516" y1="107.71172" x1="102.63588" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="139.01893" x2="137.63044" y1="139.01893" x1="61.89132" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(90 101.5,100.22073364257814) " stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="100.22073" x2="120.93079" y1="100.22073" x1="82.06922" fill-opacity="null" stroke-width="35.5" fill="none"/>
+ </g>
+</svg>

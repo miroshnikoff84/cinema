@@ -1,0 +1,14 @@
+<svg width="203" height="208" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="205" height="210" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="94" rx="93" id="svg_16" cy="103.25" cx="101.25" fill-opacity="null" stroke-width="12.5" stroke="#ffffff" fill="none"/>
+  <line stroke="#ffffff" stroke-linecap="null" stroke-linejoin="null" id="svg_1" y2="104" x2="101.99999" y1="104" x1="37.60874" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(90 101.50000762939453,72.3695526123047) " stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="72.36955" x2="139.36957" y1="72.36955" x1="63.63045" fill-opacity="null" stroke-width="12.5" fill="none"/>
+ </g>
+</svg>

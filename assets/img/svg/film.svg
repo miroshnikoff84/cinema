@@ -1,0 +1,20 @@
+<svg width="203.00000000000003" height="208" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="210" width="205" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill="none" stroke="#ffffff" stroke-width="12.5" fill-opacity="null" cx="101.56847" cy="103.22096" id="svg_16" rx="93" ry="94" transform="rotate(90 101.56847381591797,103.22096252441408) "/>
+  <rect stroke="#ffffff" id="svg_1" height="38.85351" width="66.24204" y="84.92084" x="68.42206" fill-opacity="null" stroke-width="14" fill="none"/>
+  <ellipse stroke="#ffffff" ry="19.72296" rx="20.51187" id="svg_2" cy="61.05775" cx="68.03293" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <ellipse id="svg_4" cy="104.78125" cx="58.66561" fill-opacity="null" stroke-width="12.5" stroke="#ffffff" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(26 72.26103210449219,144.95722961425778) " stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="166.31992" x2="72.42027" y1="123.59453" x1="72.1018" fill-opacity="null" stroke-width="9" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(-24 130.83349609375003,144.89355468750003) " stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="166.08282" x2="130.99272" y1="123.70429" x1="130.67425" fill-opacity="null" stroke-width="9" fill="none"/>
+  <path stroke="#ffffff" transform="rotate(-90 148.17034912109378,102.23951721191408) " id="svg_13" d="m135.90921,108.13124l4.59793,-11.78346l15.32644,0l4.59793,11.78346l-24.5223,0z" fill-opacity="null" stroke-width="12.5" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(-90 101.50000000000001,104) " stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="125.03839" x2="101.55077" y1="82.96161" x1="101.44923" fill-opacity="null" stroke-width="9" fill="none"/>
+  <ellipse stroke="#ffffff" ry="19.72296" rx="20.51187" id="svg_17" cy="60.1459" cx="132.16662" fill-opacity="null" stroke-width="12.5" fill="none"/>
+ </g>
+</svg>
